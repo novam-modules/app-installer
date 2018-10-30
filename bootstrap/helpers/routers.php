@@ -15,10 +15,13 @@ if(!function_exists('user_routes')){
 
 if(!function_exists('user_route')){
 
-    function user_route($key = null)
+    function user_route($url = null)
     {
+        $url = trim($url, "/\\");
+
         foreach(user_routes() as $route){
-            if(request()->is("$route*")) return true;
+            if(request()->is("$route*")) return $route;
         }
+        return $url;
     }
 }

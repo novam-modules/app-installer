@@ -14,9 +14,9 @@
 
 <body>
     @hasSection('layout')
-        @yield('layout')
+    @yield('layout')
     @else
-        @yield('content')
+    @yield('content')
     @endif
 
     <script src="{{ mix('js/main.js') }}"></script>
