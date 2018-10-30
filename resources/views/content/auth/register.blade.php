@@ -12,21 +12,21 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="empno" class="col-md-4 col-form-label text-md-right">{{ __('Employee Num.') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="empno" type="text" class="form-control{{ $errors->has('empno') ? ' is-invalid' : '' }}" name="empno" value="{{ old('empno') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('empno'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('empno') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Company E-Mail') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -40,7 +40,21 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="sec_email" class="col-md-4 col-form-label text-md-right">{{ __('Secondary E-Mail') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="sec_email" type="email" class="form-control{{ $errors->has('sec_email') ? ' is-invalid' : '' }}" name="sec_email" value="{{ old('sec_email') }}" required>
+
+                                @if ($errors->has('sec_email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('sec_email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Strong Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
