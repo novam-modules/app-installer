@@ -39,8 +39,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
@@ -53,6 +52,14 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "install-modules-cmd": [
+            "cd modules/ && git clone https://github.com/novam-modules/thirdparty.git",
+            "cd modules/ && git clone https://github.com/novam-modules/business.git",
+            "cd modules/ && git clone https://github.com/novam-modules/personell.git",
+            "cd modules/ && git clone https://github.com/novam-modules/timetrack.git",
+            "cd modules/ && git clone https://github.com/novam-modules/inventory.git",
+            "cd modules/ && git clone https://github.com/novam-modules/calendar.git"
         ]
     },
     "config": {

@@ -2,19 +2,9 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/main.css": "/css/main.css",
-    "/css/business.css": "/css/business.css",
     "/css/dashboard.css": "/css/dashboard.css",
-    "/css/documedia.css": "/css/documedia.css",
-    "/css/inventory.css": "/css/inventory.css",
-    "/css/personell.css": "/css/personell.css",
     "/css/projects.css": "/css/projects.css",
-    "/css/timetracker.css": "/css/timetracker.css",
-    "/js/personell.js": "/js/personell.js",
     "/js/main.js": "/js/main.js",
     "/js/projects.js": "/js/projects.js",
-    "/js/timetracker.js": "/js/timetracker.js",
-    "/js/inventory.js": "/js/inventory.js",
-    "/js/documedia.js": "/js/documedia.js",
-    "/js/dashboard.js": "/js/dashboard.js",
-    "/js/business.js": "/js/business.js"
+    "/js/dashboard.js": "/js/dashboard.js"
 }
