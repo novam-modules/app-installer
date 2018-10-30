@@ -20,6 +20,9 @@
         "nwidart/laravel-modules": "^4.0"
     },
     "autoload": {
+        "files": [
+            "bootstrap/helpers/autoload.php"
+        ],
         "classmap": [
             "database/seeds",
             "database/factories"

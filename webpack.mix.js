@@ -19,8 +19,8 @@ let join = require('path').join;
 mix.setPublicPath('public')
     .js('resources/js/app.js', 'js')
     .sass('resources/sass/app.scss', 'css')
-    .js('resources/js/admin.js', 'js')
-    .sass('resources/sass/admin.scss', 'css');
+    .js('resources/js/main.js', 'js')
+    .sass('resources/sass/main.scss', 'css');
 
 
 /**
