@@ -23,7 +23,7 @@ return [
     */
 
     'stubs' => [
-        'enabled' => false,
+        'enabled' => true,
         'path' => base_path() . '/bootstrap/Commands/stubs',
         'files' => [
             'routes/web' => 'Routes/web.php',

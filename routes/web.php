@@ -19,3 +19,7 @@ Auth::routes(['verify' => true]);
 Route::get('/auth', Auth\AuthController::class)->name('auth');
 
 Route::get('/home', HomeController::class)->name('home');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
+    Route::any(AdminController::class);
+});
