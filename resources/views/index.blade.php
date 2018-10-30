@@ -1,5 +1,5 @@
 @extends('layouts.base')
-@section('content')
+@section('styles')
 @push('styles')
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 <style>
@@ -56,6 +56,7 @@ margin-bottom: 30px;
 }
 </style>
 @endsection
+@section('content')
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
     <div class="top-right links">

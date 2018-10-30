@@ -16,6 +16,11 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    public function __invoke()
+    {
+        return $this->index();
+    }
+
     /**
      * Show the application dashboard.
      *
@@ -23,6 +28,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return redirect('admin/dashboard');
     }
 }

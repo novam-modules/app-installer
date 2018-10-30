@@ -24,7 +24,7 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
+        'path' => base_path() . '/bootstrap/Commands/stubs',
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
@@ -67,7 +67,7 @@ return [
         |
         */
 
-        'modules' => base_path('Modules'),
+        'modules' => base_path('modules'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path
@@ -102,15 +102,15 @@ return [
             'migration' => ['path' => 'Database/Migrations', 'generate' => true],
             'seeder' => ['path' => 'Database/Seeders', 'generate' => true],
             'factory' => ['path' => 'Database/factories', 'generate' => true],
-            'model' => ['path' => 'Entities', 'generate' => true],
+            'model' => ['path' => 'Models', 'generate' => true],
             'controller' => ['path' => 'Http/Controllers', 'generate' => true],
             'filter' => ['path' => 'Http/Middleware', 'generate' => true],
             'request' => ['path' => 'Http/Requests', 'generate' => true],
-            'provider' => ['path' => 'Providers', 'generate' => true],
+            'provider' => ['path' => 'Providers', 'generate' => false],
             'assets' => ['path' => 'Resources/assets', 'generate' => true],
             'lang' => ['path' => 'Resources/lang', 'generate' => true],
             'views' => ['path' => 'Resources/views', 'generate' => true],
-            'test' => ['path' => 'Tests', 'generate' => true],
+            'test' => ['path' => 'Tests', 'generate' => false],
             'repository' => ['path' => 'Repositories', 'generate' => false],
             'event' => ['path' => 'Events', 'generate' => false],
             'listener' => ['path' => 'Listeners', 'generate' => false],
