@@ -12,5 +12,5 @@
 */
 
 Route::prefix('admin')->group(function() {
-    Route::resource($LOWER_NAME$, $STUDLY_NAME$Controller::class);
+    Route::resource('$LOWER_NAME$', $STUDLY_NAME$Controller::class);
 });

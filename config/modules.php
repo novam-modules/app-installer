@@ -24,7 +24,7 @@ return [
 
     'stubs' => [
         'enabled' => true,
-        'path' => base_path() . '/bootstrap/Commands/stubs',
+        'path' => base_path() . '/app/Console/Commands/stubs',
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
@@ -77,7 +77,7 @@ return [
         |
         */
 
-        'assets' => public_path('modules'),
+        'assets' => public_path('admin'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
@@ -148,10 +148,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'novam-modules',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'Hilkiah Makemo',
+            'email' => 'hilmak01@gmail.com',
         ],
     ],
     /*
@@ -164,7 +164,7 @@ return [
     */
     'cache' => [
         'enabled' => false,
-        'key' => 'laravel-modules',
+        'key' => 'novam-modules',
         'lifetime' => 60,
     ],
     /*

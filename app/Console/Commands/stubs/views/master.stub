@@ -1,5 +1,6 @@
-@extends('layouts.master)
+@extends('layouts.master')
 @section('styles')
+@parent
 <link rel="stylesheet" href="{{ mix('css/$LOWER_NAME$.css') }}">
 @endsection
 @section('layout')
@@ -8,5 +9,6 @@
     </main>
 @endsection
 @section('scripts')
+@parent
 <script src="{{ mix('js/$LOWER_NAME$.js') }}"></script>
 @endsection
