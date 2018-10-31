@@ -17,10 +17,10 @@
     <button id="login" type="submit" name="registerSubmit" class="btn btn-primary">Login</button>
 </form>
 <hr />
-<a href="/passwords/email" class="forgot-pass">Forgot Password?</a>
+<small>Forgot login credentials? </small>
+<a href="/password/reset" class="forgot-pass">Reset</a>
 <br />
-<small>Do not have an
-    account? </small>
+<small>Do not have an account? </small>
 <a href="{{ route('register') }}" class="signup">Signup</a>
 
 @endsection
