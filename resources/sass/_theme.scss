@@ -1,10 +1,11 @@
-.side-navbar.shrinked {
-    ul {
-        li {
-            text-align: center;
-            i {
-                display: inline-block;
+nav.side-navbar.shrinked {
+     ul {
+            li  {
+                a {
+                    i {
+                        margin: 0 auto 5px;
+                    }
+                }
             }
         }
     }
-}

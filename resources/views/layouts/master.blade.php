@@ -14,22 +14,20 @@
 </head>
 
 <body>
-@guest
-<div class="page">
-    @yield('content')
-</div>
-@else
 <div class="page">
     @include('_partials.main.header')
     <div class="page-content d-flex align-items-stretch">
         @include('_partials.main.sidenav')
-        <div class="content-inner">
-        @yield('layout')
+        <div class="content-inner px-3">
+        @hasSection('layout')
+            @yield('layout')
+        @else
+            @yield('content')
+        @endif
         @include('_partials.main.footer')
         </div>
     </div>
 </div>
-@endguest
 
 <script src="{{ mix('js/main.js') }}"></script>
 @yield('scripts')
