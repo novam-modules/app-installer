@@ -3,33 +3,39 @@
     @include('_partials.main.badge')
     <!-- Sidebar Navidation Menus-->
     <span class="heading">Welcome</span>
-    <ul class="list-unstyled p-0">
+    <ul class="list-unstyled p-0 m-0 mb-2">
         <li class="active">
-            <a href="/admin">
+            <a href="/admin/dashboard">
                 <i class="fa fa-dashboard fa-fw"></i> Dashboard
             </a>
         </li>
         <li>
-            <a href="/admin">
+            <a href="/my/dashboard">
                 <i class="fa fa-th fa-fw"></i> My Portal
             </a>
         </li>
     </ul>
     <span class="heading">Business</span>
-    <ul class="list-unstyled p-0">
+    <ul class="list-unstyled p-0 m-0 mb-2">
         <li>
             <a href="#projects" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-flask fa-fw"></i> Projects
             </a>
             <ul id="projects" class="collapse list-unstyled ">
                 <li>
-                    <a href="{{  route('projects.create') }}"> Recent</a>
+                    <a href="{{  route('projects.create') }}">
+                    <i class="fa fa-caret-right"></i> Recent
+                </a>
                 </li>
                 <li>
-                    <a href="{{  route('projects.index') }}"> View All</a>
+                    <a href="{{  route('projects.index') }}">
+                        <i class="fa fa-caret-right"></i> View All
+                    </a>
                 </li>
                 <li>
-                    <a href="{{  route('projects.create') }}"> Add New</a>
+                    <a href="{{  route('projects.create') }}">
+                        <i class="fa fa-caret-right"></i> Add New
+                    </a>
                 </li>
             </ul>
         </li>
@@ -49,6 +55,16 @@
                         <i class="fa fa-caret-right"></i> Labor
                     </a>
                 </li>
+                <li>
+                    <a href="charts-gauge-sparkline.html">
+                        <i class="fa fa-caret-right"></i> Materials
+                    </a>
+                </li>
+                <li>
+                    <a href="charts-gauge-sparkline.html">
+                        <i class="fa fa-caret-right"></i> Efficiency
+                    </a>
+                </li>
             </ul>
         </li>
         <li>
@@ -58,19 +74,25 @@
             </a>
             <ul id="componentsDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">Materials</a>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Materials
+                    </a>
                 </li>
                 <li>
-                    <a href="components-calendar.html">Equipment</a>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Fleet
+                    </a>
                 </li>
                 <li>
-                    <a href="components-gallery.html">Fleet</a>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Equipment
+                    </a>
                 </li>
             </ul>
         </li>
     </ul>
     <span class="heading">Content</span>
-<ul class="list-unstyled p-0">
+<ul class="list-unstyled p-0 m-0 mb-2">
     <li>
         <a href="#formsDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-files-o fa-fw"></i> Files
@@ -99,7 +121,7 @@
     </li>
         <li>
             <a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse">
-                <i class="fa fa-sitemap fa-fw"></i> Docs
+                <i class="fa fa-sitemap fa-fw"></i> Pages
 
             </a>
             <ul id="pagesDropdown" class="collapse list-unstyled ">
@@ -117,29 +139,9 @@
                 </li>
             </ul>
         </li>
-        <li>
-            <a href="#formsDD" aria-expanded="false" data-toggle="collapse">
-                <i class="fa fa-file fa-fw"></i> Forms
-
-            </a>
-            <ul id="formsDD" class="collapse list-unstyled ">
-                <li>
-                    <a href="pages-contacts.html">Contacts</a>
-                </li>
-                <li>
-                    <a href="login.html">Login page</a>
-                </li>
-                <li>
-                    <a href="pages-profile.html">Profile</a>
-                </li>
-                <li>
-                    <a href="pages-pricing.html">Pricing table</a>
-                </li>
-            </ul>
-        </li>
     </ul>
     <span class="heading">System</span>
-    <ul class="list-unstyled p-0">
+    <ul class="list-unstyled p-0 m-0 mb-2">
         <li>
             <a href="#">
                 <i class="fa fa-wrench fa-fw"></i>Settings
