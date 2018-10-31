@@ -5,6 +5,7 @@
 /public/js
 /public/*.json
 /storage/*.key
+/resources/views/modules
 /vendor
 /.idea
 /.vscode

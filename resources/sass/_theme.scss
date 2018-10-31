@@ -9,3 +9,8 @@ nav.side-navbar.shrinked {
             }
         }
     }
+.content-inner {
+    > *:not(header) {
+        padding: 2rem;
+    }
+}

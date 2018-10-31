@@ -14,25 +14,28 @@
 </head>
 
 <body>
-<div class="page">
-
-    @include('_partials.main.header')
-
-    <div class="page-content d-flex align-items-stretch">
-
-        @include('_partials.main.sidenav')
-
-        <div class="content-inner">
-            @yield('layout')
-
-            @include('_partials.main.footer')
+    <div class="page">
+        @include('_partials.main.header')
+        <div class="page-content d-flex align-items-stretch">
+        @unless(request()->is("*my*"))
+            @include('_partials.main.sidenav')
+        @endunless
+            <div class="{{ request()->is('*my*')? 'container-fluid': 'content-inner' }}">
+            @hasSection('layout')
+                @yield('layout')
+            @else
+                @yield('content')
+            @endif
+            @unless(request()->is("*my*"))
+                @include('_partials.main.footer')
+            @endunless
+            </div>
         </div>
     </div>
-</div>
 
-<script src="{{ mix('js/main.js') }}"></script>
-@yield('scripts')
-@stack('scripts')
+    <script src="{{ mix('js/main.js') }}"></script>
+    @yield('scripts')
+    @stack('scripts')
 </body>
 
 </html>

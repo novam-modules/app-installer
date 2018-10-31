@@ -96,11 +96,10 @@
     <li>
         <a href="#formsDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-files-o fa-fw"></i> Files
-
         </a>
         <ul id="formsDropdown" class="collapse list-unstyled ">
             <li>
-                <a href="forms.html">Basic forms</a>
+                <a href="{{ route('documedia.create') }}"> Upload </a>
             </li>
             <li>
                 <a href="forms-advanced.html">Advanced forms</a>
@@ -122,6 +121,26 @@
         <li>
             <a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-sitemap fa-fw"></i> Pages
+
+            </a>
+            <ul id="pagesDropdown" class="collapse list-unstyled ">
+                <li>
+                    <a href="pages-contacts.html">Contacts</a>
+                </li>
+                <li>
+                    <a href="login.html">Login page</a>
+                </li>
+                <li>
+                    <a href="pages-profile.html">Profile</a>
+                </li>
+                <li>
+                    <a href="pages-pricing.html">Pricing table</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-file fa-fw"></i> Forms
 
             </a>
             <ul id="pagesDropdown" class="collapse list-unstyled ">
