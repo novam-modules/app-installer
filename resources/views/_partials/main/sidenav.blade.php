@@ -3,33 +3,39 @@
     @include('_partials.main.badge')
     <!-- Sidebar Navidation Menus-->
     <span class="heading">Welcome</span>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled p-0 m-0 mb-2">
         <li class="active">
-            <a href="/admin">
+            <a href="/admin/dashboard">
                 <i class="fa fa-dashboard fa-fw"></i> Dashboard
             </a>
         </li>
         <li>
-            <a href="/admin">
+            <a href="/my/dashboard">
                 <i class="fa fa-th fa-fw"></i> My Portal
             </a>
         </li>
     </ul>
     <span class="heading">Business</span>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled p-0 m-0 mb-2">
         <li>
             <a href="#projects" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-flask fa-fw"></i> Projects
             </a>
             <ul id="projects" class="collapse list-unstyled ">
                 <li>
-                    <a href="{{  route('projects.create') }}"> Recent</a>
+                    <a href="{{  route('projects.create') }}">
+                    <i class="fa fa-caret-right"></i> Recent
+                </a>
                 </li>
                 <li>
-                    <a href="{{  route('projects.index') }}"> View All</a>
+                    <a href="{{  route('projects.index') }}">
+                        <i class="fa fa-caret-right"></i> View All
+                    </a>
                 </li>
                 <li>
-                    <a href="{{  route('projects.create') }}"> Add New</a>
+                    <a href="{{  route('projects.create') }}">
+                        <i class="fa fa-caret-right"></i> Add New
+                    </a>
                 </li>
             </ul>
         </li>
@@ -49,6 +55,16 @@
                         <i class="fa fa-caret-right"></i> Labor
                     </a>
                 </li>
+                <li>
+                    <a href="charts-gauge-sparkline.html">
+                        <i class="fa fa-caret-right"></i> Materials
+                    </a>
+                </li>
+                <li>
+                    <a href="charts-gauge-sparkline.html">
+                        <i class="fa fa-caret-right"></i> Efficiency
+                    </a>
+                </li>
             </ul>
         </li>
         <li>
@@ -58,31 +74,25 @@
             </a>
             <ul id="componentsDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">Cards</a>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Materials
+                    </a>
                 </li>
                 <li>
-                    <a href="components-calendar.html">Calendar</a>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Fleet
+                    </a>
                 </li>
                 <li>
-                    <a href="components-gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="components-loading-buttons.html">Loading buttons</a>
-                </li>
-                <li>
-                    <a href="components-map.html">Maps</a>
-                </li>
-                <li>
-                    <a href="components-notifications.html">Notifications</a>
-                </li>
-                <li>
-                    <a href="components-preloader.html">Preloaders</a>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Equipment
+                    </a>
                 </li>
             </ul>
         </li>
     </ul>
     <span class="heading">Content</span>
-<ul class="list-unstyled">
+<ul class="list-unstyled p-0 m-0 mb-2">
     <li>
         <a href="#formsDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-files-o fa-fw"></i> Files
@@ -131,7 +141,7 @@
         </li>
     </ul>
     <span class="heading">System</span>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled p-0 m-0 mb-2">
         <li>
             <a href="#">
                 <i class="fa fa-wrench fa-fw"></i>Settings
