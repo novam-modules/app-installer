@@ -92,7 +92,7 @@
         </li>
         <li>
             <a href="#operations" aria-expanded="false" data-toggle="collapse">
-                <i class="fa fa-list fa-fw"></i> Operations
+                <i class="fa fa-list fa-fw"></i> Operationsgit <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
 
             </a>
             <ul id="operations" class="collapse list-unstyled ">
