@@ -3,7 +3,7 @@
     @include('_partials.main.badge')
     <!-- Sidebar Navidation Menus-->
     <span class="heading">Welcome</span>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled p-0">
         <li class="active">
             <a href="/admin">
                 <i class="fa fa-dashboard fa-fw"></i> Dashboard
@@ -16,7 +16,7 @@
         </li>
     </ul>
     <span class="heading">Business</span>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled p-0">
         <li>
             <a href="#projects" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-flask fa-fw"></i> Projects
@@ -58,31 +58,19 @@
             </a>
             <ul id="componentsDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">Cards</a>
+                    <a href="components-cards.html">Materials</a>
                 </li>
                 <li>
-                    <a href="components-calendar.html">Calendar</a>
+                    <a href="components-calendar.html">Equipment</a>
                 </li>
                 <li>
-                    <a href="components-gallery.html">Gallery</a>
-                </li>
-                <li>
-                    <a href="components-loading-buttons.html">Loading buttons</a>
-                </li>
-                <li>
-                    <a href="components-map.html">Maps</a>
-                </li>
-                <li>
-                    <a href="components-notifications.html">Notifications</a>
-                </li>
-                <li>
-                    <a href="components-preloader.html">Preloaders</a>
+                    <a href="components-gallery.html">Fleet</a>
                 </li>
             </ul>
         </li>
     </ul>
     <span class="heading">Content</span>
-<ul class="list-unstyled">
+<ul class="list-unstyled p-0">
     <li>
         <a href="#formsDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-files-o fa-fw"></i> Files
@@ -111,7 +99,7 @@
     </li>
         <li>
             <a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse">
-                <i class="fa fa-sitemap fa-fw"></i> Pages
+                <i class="fa fa-sitemap fa-fw"></i> Docs
 
             </a>
             <ul id="pagesDropdown" class="collapse list-unstyled ">
@@ -129,9 +117,29 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="#formsDD" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-file fa-fw"></i> Forms
+
+            </a>
+            <ul id="formsDD" class="collapse list-unstyled ">
+                <li>
+                    <a href="pages-contacts.html">Contacts</a>
+                </li>
+                <li>
+                    <a href="login.html">Login page</a>
+                </li>
+                <li>
+                    <a href="pages-profile.html">Profile</a>
+                </li>
+                <li>
+                    <a href="pages-pricing.html">Pricing table</a>
+                </li>
+            </ul>
+        </li>
     </ul>
     <span class="heading">System</span>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled p-0">
         <li>
             <a href="#">
                 <i class="fa fa-wrench fa-fw"></i>Settings
