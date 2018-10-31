@@ -10,6 +10,17 @@ class SettingsController extends Controller
     //
     public function __invoke()
     {
-        return view('sys.settings.index');
+        
+    }
+
+    public function index()
+    {
+        $data['Configs'] = []; //settings();
+        return view('content.sys.settings.index', $data);
+    }
+
+    public function store(Request $request)
+    {
+        dump($request->all());
     }
 }

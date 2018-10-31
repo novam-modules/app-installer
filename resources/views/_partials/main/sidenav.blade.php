@@ -4,7 +4,7 @@
     <!-- Sidebar Navidation Menus-->
     <span class="heading">Welcome</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
-        <li class="active">
+        <li class="{{ request()->is('admin/dashboard')?'active': '' }}">
             <a href="/admin/dashboard">
                 <i class="fa fa-dashboard fa-fw"></i> Dashboard
             </a>
@@ -184,8 +184,8 @@
     </ul>
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
-        <li>
-            <a href="#">
+        <li class="{{ request()->is('*settings*')?'active': '' }}">
+            <a href="{{ route('settings') }}">
                 <i class="fa fa-wrench fa-fw"></i>Settings
             </a>
         </li>
