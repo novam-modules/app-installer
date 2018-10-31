@@ -1,6 +1,6 @@
 <nav class="side-navbar">
     <!-- Sidebar Header-->
-    @include('_partials.main.badge')
+    @include('_partials.main.brand')
     <!-- Sidebar Navidation Menus-->
     <span class="heading">Welcome</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
@@ -86,6 +86,29 @@
                 <li>
                     <a href="components-cards.html">
                         <i class="fa fa-caret-right"></i> Equipment
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#operations" aria-expanded="false" data-toggle="collapse">
+                <i class="fa fa-list fa-fw"></i> Operations
+
+            </a>
+            <ul id="operations" class="collapse list-unstyled ">
+                <li>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Calendar
+                    </a>
+                </li>
+                <li>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Travel
+                    </a>
+                </li>
+                <li>
+                    <a href="components-cards.html">
+                        <i class="fa fa-caret-right"></i> Shop Hours
                     </a>
                 </li>
             </ul>
