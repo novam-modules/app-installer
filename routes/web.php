@@ -23,4 +23,5 @@ Route::get('/home', HomeController::class)->name('home');
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     //This is where you can define some logic to be run before the modules are loaded!
     // return redirect('admin/dashboard');
+    Route::any('settings', Sys\SettingsController::class);
 });
