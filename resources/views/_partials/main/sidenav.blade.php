@@ -185,7 +185,7 @@
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
         <li class="{{ request()->is('*settings*')?'active': '' }}">
-            <a href="{{ route('settings') }}">
+            <a href="{{ user_route('settings') }}">
                 <i class="fa fa-wrench fa-fw"></i>Settings
             </a>
         </li>
