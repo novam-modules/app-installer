@@ -80,7 +80,7 @@ table {
 }
 
 .card-close .dropdown-menu a:hover {
-    background: #796AEE;
+    background: $primary;
     color: #fff !important
 }
 
@@ -216,7 +216,7 @@ input {
 }
 
 .bg-violet {
-    background: #796AEE !important;
+    background: $primary !important;
     color: #fff
 }
 
@@ -265,11 +265,11 @@ input {
 }
 
 .text-violet {
-    color: #796AEE
+    color: $primary
 }
 
 .text-violet:hover {
-    color: #796AEE
+    color: $primary
 }
 
 .text-blue {
@@ -456,7 +456,7 @@ nav.side-navbar ul li a {
 }
 
 nav.side-navbar ul li a:hover {
-    background: #796AEE;
+    background: $primary;
     border-left: 4px solid #3b25e6;
     color: #fff
 }
@@ -467,13 +467,13 @@ nav.side-navbar ul li li a {
 }
 
 nav.side-navbar ul li.active>a {
-    background: #796AEE;
+    background: $primary;
     color: #fff;
     border-left: 4px solid #3b25e6
 }
 
 nav.side-navbar ul li.active>a:hover {
-    background: #796AEE
+    background: $primary
 }
 
 nav.side-navbar ul li li.active>a {
@@ -827,7 +827,7 @@ nav.navbar .dropdown-menu .dropdown-item i {
     width: 30px;
     height: 30px;
     line-height: 30px;
-    background: #796AEE;
+    background: $primary;
     text-align: center;
     color: #fff;
     border-radius: 50%;
@@ -1525,10 +1525,10 @@ footer.main-footer p {
 .form-control:focus {
     color: #495057;
     background-color: #fff;
-    border-color: #796AEE;
+    border-color: $primary;
     outline: none;
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.25);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.25)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-quad;
+    box-shadow: 0 0 0 .2rem $primary-quad
 }
 
 .form-control-sm {
@@ -1571,7 +1571,7 @@ select.form-control option {
 }
 
 .input-group .dropdown-menu a:hover {
-    color: #796AEE;
+    color: $primary;
     background: none
 }
 
@@ -1659,7 +1659,7 @@ input[type='submit'] {
 
 .checkbox-template:checked::before,
 .radio-template:checked::before {
-    background: #796AEE
+    background: $primary
 }
 
 .checkbox-template:checked::after,
@@ -1701,7 +1701,7 @@ input.input-material.is-invalid {
 }
 
 input.input-material:focus {
-    border-color: #796AEE
+    border-color: $primary
 }
 
 input.input-material~label {
@@ -1718,7 +1718,7 @@ input.input-material~label {
 input.input-material~label.active {
     font-size: 0.8rem;
     top: -10px;
-    color: #796AEE
+    color: $primary
 }
 
 input.input-material.is-invalid~label {
@@ -1798,7 +1798,7 @@ input.input-material.is-invalid~label {
 }
 
 .noUi-connect {
-    background: #796AEE
+    background: $primary
 }
 
 .datepicker-dropdown.dropdown-menu {
@@ -1818,8 +1818,8 @@ input.input-material.is-invalid~label {
 
 .datepicker-dropdown.dropdown-menu td.active,
 .datepicker-dropdown.dropdown-menu td:active {
-    background-color: #796AEE !important;
-    border-color: #796AEE !important
+    background-color: $primary !important;
+    border-color: $primary !important
 }
 
 .datepicker-dropdown.dropdown-menu:before,
@@ -1857,7 +1857,7 @@ input.input-material.is-invalid~label {
 
 .bootstrap-select .dropdown-menu li a:hover {
     background: #fff;
-    color: #796AEE
+    color: $primary
 }
 
 .bootstrap-select .dropdown-toggle:focus {
@@ -1869,7 +1869,7 @@ input.input-material.is-invalid~label {
 }
 
 .bootstrap-tagsinput .label-info {
-    background-color: #796AEE;
+    background-color: $primary;
     display: inline-block;
     padding: 2px 10px;
     border-radius: 3px;
@@ -1944,7 +1944,7 @@ input.input-material.is-invalid~label {
 }
 
 .ms-container .ms-list.ms-focus {
-    border-color: #796AEE
+    border-color: $primary
 }
 
 .ms-container ul {
@@ -1976,7 +1976,7 @@ input.input-material.is-invalid~label {
     cursor: pointer;
     color: #fff;
     text-decoration: none;
-    background-color: #796AEE
+    background-color: $primary
 }
 
 .ms-container .ms-selectable li.disabled,
@@ -2556,7 +2556,7 @@ input.input-material.is-invalid~label {
 }
 
 .login-page .form-holder .info {
-    background: rgba(121, 106, 238, 0.9);
+    background: $primary-full;
     color: #fff
 }
 
@@ -3198,9 +3198,9 @@ ul.messenger-theme-flat .messenger-spinner {
 
 .fc-event,
 .fc-event-dot {
-    background-color: #796AEE;
+    background-color: $primary;
     color: #fff !important;
-    border-color: #796AEE
+    border-color: $primary
 }
 
 .fc .alert-info {
@@ -3293,7 +3293,7 @@ ul.messenger-theme-flat .messenger-spinner {
 
 .infobox h3 a:focus,
 .infobox h3 a:hover {
-    color: #796AEE
+    color: $primary
 }
 
 .infobox .image {
@@ -3315,7 +3315,7 @@ ul.messenger-theme-flat .messenger-spinner {
 .sk-rotating-plane {
     width: 40px;
     height: 40px;
-    background-color: #796AEE;
+    background-color: $primary;
     margin: 0;
     -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
     animation: sk-rotatePlane 1.2s infinite ease-in-out
@@ -3366,7 +3366,7 @@ ul.messenger-theme-flat .messenger-spinner {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #796AEE;
+    background-color: $primary;
     opacity: 0.6;
     position: absolute;
     top: 0;
@@ -3417,7 +3417,7 @@ ul.messenger-theme-flat .messenger-spinner {
 }
 
 .sk-wave .sk-rect {
-    background-color: #796AEE;
+    background-color: $primary;
     height: 100%;
     width: 6px;
     display: inline-block;
@@ -3488,7 +3488,7 @@ ul.messenger-theme-flat .messenger-spinner {
 }
 
 .sk-wandering-cubes .sk-cube {
-    background-color: #796AEE;
+    background-color: $primary;
     width: 10px;
     height: 10px;
     position: absolute;
@@ -3571,7 +3571,7 @@ ul.messenger-theme-flat .messenger-spinner {
     width: 40px;
     height: 40px;
     margin: 0;
-    background-color: #796AEE;
+    background-color: $primary;
     border-radius: 100%;
     -webkit-animation: sk-pulseScaleOut 1.0s infinite ease-in-out;
     animation: sk-pulseScaleOut 1.0s infinite ease-in-out
@@ -3619,7 +3619,7 @@ ul.messenger-theme-flat .messenger-spinner {
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: #796AEE;
+    background-color: $primary;
     border-radius: 100%;
     -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
     animation: sk-chasingDotsBounce 2s infinite ease-in-out
@@ -3683,7 +3683,7 @@ ul.messenger-theme-flat .messenger-spinner {
 .sk-three-bounce .sk-child {
     width: 20px;
     height: 20px;
-    background-color: #796AEE;
+    background-color: $primary;
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
@@ -3751,7 +3751,7 @@ ul.messenger-theme-flat .messenger-spinner {
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: #796AEE;
+    background-color: $primary;
     border-radius: 100%;
     -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
     animation: sk-circleBounceDelay 1.2s infinite ease-in-out both
@@ -3906,7 +3906,7 @@ ul.messenger-theme-flat .messenger-spinner {
 .sk-cube-grid .sk-cube {
     width: 33.33%;
     height: 33.33%;
-    background-color: #796AEE;
+    background-color: $primary;
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
     animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out
@@ -4008,7 +4008,7 @@ ul.messenger-theme-flat .messenger-spinner {
     margin: 0 auto;
     width: 15%;
     height: 15%;
-    background-color: #796AEE;
+    background-color: $primary;
     border-radius: 100%;
     -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
     animation: sk-circleFadeDelay 1.2s infinite ease-in-out both
@@ -4175,7 +4175,7 @@ ul.messenger-theme-flat .messenger-spinner {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #796AEE;
+    background-color: $primary;
     -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
     animation: sk-foldCubeAngle 2.4s infinite linear both;
     -webkit-transform-origin: 100% 100%;
@@ -4403,8 +4403,8 @@ ul.messenger-theme-flat .messenger-spinner {
 .btn:focus,
 .btn.focus {
     outline: 0;
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.25);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.25)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-quad;
+    box-shadow: 0 0 0 .2rem $primary-quad
 }
 
 .btn.disabled,
@@ -4418,43 +4418,43 @@ ul.messenger-theme-flat .messenger-spinner {
 }
 
 .btn-primary {
-    color: color-yiq(#796AEE);
-    background-color: #796AEE;
-    border-color: #796AEE
+    color: color-yiq($primary);
+    background-color: $primary;
+    border-color: $primary
 }
 
 .btn-primary:hover {
-    color: color-yiq(#5a48ea);
-    background-color: #5a48ea;
-    border-color: #503ce9
+    color: color-yiq($primary-half);
+    background-color: $primary-half;
+    border-color: $primary
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-half;
+    box-shadow: 0 0 0 .2rem $primary-half
 }
 
 .btn-primary.disabled,
 .btn-primary:disabled {
-    color: color-yiq(#796AEE);
-    background-color: #796AEE;
-    border-color: #796AEE
+    color: color-yiq($primary);
+    background-color: $primary;
+    border-color: $primary
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
-    color: color-yiq(#503ce9);
-    background-color: #503ce9;
+    color: color-yiq($primary);
+    background-color: $primary;
     border-color: #4631e7
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-half;
+    box-shadow: 0 0 0 .2rem $primary-half
 }
 
 .btn-secondary {
@@ -4778,43 +4778,43 @@ ul.messenger-theme-flat .messenger-spinner {
 }
 
 .btn-outline-primary {
-    color: #796AEE;
+    color: $primary;
     background-color: transparent;
     background-image: none;
-    border-color: #796AEE
+    border-color: $primary
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #796AEE;
-    border-color: #796AEE
+    background-color: $primary;
+    border-color: $primary
 }
 
 .btn-outline-primary:focus,
 .btn-outline-primary.focus {
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-half;
+    box-shadow: 0 0 0 .2rem $primary-half
 }
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-    color: #796AEE;
+    color: $primary;
     background-color: transparent
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show>.btn-outline-primary.dropdown-toggle {
-    color: color-yiq(#796AEE);
-    background-color: #796AEE;
-    border-color: #796AEE
+    color: color-yiq($primary);
+    background-color: $primary;
+    border-color: $primary
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show>.btn-outline-primary.dropdown-toggle:focus {
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-half;
+    box-shadow: 0 0 0 .2rem $primary-half
 }
 
 .btn-outline-secondary {
@@ -5121,7 +5121,7 @@ body {
 }
 
 a {
-    color: #796AEE;
+    color: $primary;
     text-decoration: none
 }
 
@@ -5229,7 +5229,7 @@ mark,
     padding: .5rem 1rem;
     margin-bottom: 2rem;
     font-size: 1.25rem;
-    border-left: 5px solid #796AEE
+    border-left: 5px solid $primary
 }
 
 .blockquote-footer {
@@ -5241,12 +5241,12 @@ mark,
 }
 
 .text-primary {
-    color: #796AEE !important
+    color: $primary !important
 }
 
 a.text-primary:focus,
 a.text-primary:hover {
-    color: #503ce9 !important
+    color: $primary !important
 }
 
 .page-item:first-child .page-link {
@@ -5261,8 +5261,8 @@ a.text-primary:hover {
 
 .page-item.active .page-link {
     color: #fff;
-    background-color: #796AEE;
-    border-color: #796AEE
+    background-color: $primary;
+    border-color: $primary
 }
 
 .page-item.disabled .page-link {
@@ -5275,7 +5275,7 @@ a.text-primary:hover {
     padding: .5rem .75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #796AEE;
+    color: $primary;
     background-color: #fff;
     border: 1px solid #ddd
 }
@@ -5328,12 +5328,12 @@ a.text-primary:hover {
 }
 
 .bg-primary {
-    background-color: #796AEE !important
+    background-color: $primary !important
 }
 
 a.bg-primary:focus,
 a.bg-primary:hover {
-    background-color: #503ce9 !important
+    background-color: $primary !important
 }
 
 .bg-secondary {
@@ -5400,7 +5400,7 @@ a.bg-dark:hover {
 }
 
 .border-primary {
-    border-color: #796AEE !important
+    border-color: $primary !important
 }
 
 .border-secondary {
@@ -5432,12 +5432,12 @@ a.bg-dark:hover {
 }
 
 .text-primary {
-    color: #796AEE !important
+    color: $primary !important
 }
 
 a.text-primary:focus,
 a.text-primary:hover {
-    color: #503ce9 !important
+    color: $primary !important
 }
 
 .text-secondary {
@@ -5504,15 +5504,15 @@ a.text-dark:hover {
 }
 
 .badge-primary {
-    color: color-yiq(#796AEE);
-    background-color: #796AEE
+    color: color-yiq($primary);
+    background-color: $primary
 }
 
 .badge-primary[href]:focus,
 .badge-primary[href]:hover {
-    color: color-yiq(#796AEE);
+    color: color-yiq($primary);
     text-decoration: none;
-    background-color: #503ce9
+    background-color: $primary
 }
 
 .badge-secondary {
@@ -5657,7 +5657,7 @@ a>code {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #796AEE
+    background-color: $primary
 }
 
 .card {
@@ -5783,10 +5783,10 @@ a>code {
 }
 
 .custom-select:focus {
-    border-color: #796AEE;
+    border-color: $primary;
     outline: 0;
-    -webkit-box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5);
-    box-shadow: 0 0 0 .2rem rgba(121, 106, 238, 0.5)
+    -webkit-box-shadow: 0 0 0 .2rem $primary-half;
+    box-shadow: 0 0 0 .2rem $primary-half
 }
 
 .custom-select:focus::-ms-value {
