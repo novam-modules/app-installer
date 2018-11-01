@@ -1,13 +1,30 @@
 @extends('layouts.master')
 @section('layout')
 
-<form method="post" action="{{ user_route('settings')">
+<form method="post" action="{{ user_route('settings') }}">
 @csrf
 
-@php
+@foreach ($Settings as $key => $value)
+<div class="form-group row">
+    <div class="col-md-6">
+      <label for="">{{ $key ?? '' }}: <strong>{{ $value ?? '' }}</strong></label>
+      <p></p>
+    </div>
+@endforeach
+<hr class="w-100">
 
-@endphp
-<button>SUBMIT</button>
+<div class="form-group row">
+  <div class="col-md-4">
+    <label for="">New Setting</label>
+    <input type="text" name="key" id="key" class="form-control" placeholder="" aria-describedby="helpId">
+    <small id="helpId" class="text-muted">Help text</small>
+    <br/>
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+  </div>
+  <div class="col-md-8">
+      <textarea name="value" id="value" class="form-control" rows="5"></textarea>
+  </div>
+</div>
 </form>
 
 @endsection

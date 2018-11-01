@@ -113,18 +113,19 @@
                 </li>
             </ul>
         </li>
-        <li>
+        <li{!! request()->is("*personnel*")? ' class="active"': "" !!}>
             <a href="#personnel" aria-expanded="false" data-toggle="collapse">
                  <i class="fa fa-users" aria-hidden="true"></i> Personnel
 
             </a>
             <ul id="personnel" class="collapse list-unstyled ">
-                <li>
+                    <a href="{{  route('projects.create') }}">
+                <li{!! request()->is("*personnel")? ' class="active"': "" !!}>
                     <a href="{{ route('personnel.index') }}">
                         <i class="fa fa-caret-right"></i> Summary
                     </a>
                 </li>
-                <li>
+                <li{!! request()->is("*personnel/*")? ' class="active"': "" !!}>
                     <a href="{{ route('personnel.show', ['id' => 'employees']) }}">
                         <i class="fa fa-caret-right"></i> Employees
                     </a>
