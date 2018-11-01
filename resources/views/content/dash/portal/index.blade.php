@@ -49,7 +49,7 @@
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <a class="btn btn-block btn-default d-md-none" onlick="$('#myTab [href=" #space"]').tab('show')">Work
+                <a class="btn btn-block btn-default d-md-none" href="#space">Work
                     Space</a>
                 <div class="tab-pane bg-white active" id="space" role="tabpanel" aria-labelledby="space-tab">
                     <div class="card">
@@ -61,8 +61,9 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-block btn-default d-md-none" onlick="$('#myTab [href=" #home"]').tab('show')">My
-                    Payroll</a>
+                <a class="btn btn-block btn-default d-md-none" href="#home">My
+                    Payroll
+                </a>
                 <div class="tab-pane bg-white" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                 </div>
