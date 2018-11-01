@@ -17,7 +17,7 @@
     @component('_partials.main.alerts')
 
     @endcomponent
-    <div class="page">
+    <div class="page" id="app">
         @include('_partials.main.header')
         <div class="page-content d-flex align-items-stretch">
             @unless(request()->is("*my*"))

@@ -5,7 +5,7 @@
 @csrf
 
 @php
-    dump($Configs);
+
 @endphp
 <button>SUBMIT</button>
 </form>

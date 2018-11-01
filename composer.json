@@ -56,10 +56,10 @@
         "install-modules-cmd": [
             "cd modules/ && git clone https://github.com/novam-modules/documedia.git",
             "cd modules/ && git clone https://github.com/novam-modules/projects.git",
-            "cd modules/ && git clone https://github.com/novam-modules/dashboard.git",
+            "cd modules/ && git clone https://github.com/novam-modules/reports.git",
             "cd modules/ && git clone https://github.com/novam-modules/thirdparty.git",
             "cd modules/ && git clone https://github.com/novam-modules/business.git",
-            "cd modules/ && git clone https://github.com/novam-modules/personell.git",
+            "cd modules/ && git clone https://github.com/novam-modules/personnel.git",
             "cd modules/ && git clone https://github.com/novam-modules/timetrack.git",
             "cd modules/ && git clone https://github.com/novam-modules/inventory.git",
             "cd modules/ && git clone https://github.com/novam-modules/calendar.git"

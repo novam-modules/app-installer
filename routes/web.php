@@ -33,7 +33,7 @@ Route::get('/home', HomeController::class )->name('home');
 foreach(user_routes() as $prefix){
 
     Route::group([
-        'prefix' => $prefix, 'middleware' => ['web', 'admin']
+        'prefix' => $prefix, 'middleware' => ['web', 'verified', 'admin']
 
     ], function() {
 

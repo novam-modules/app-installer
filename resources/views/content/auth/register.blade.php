@@ -3,7 +3,7 @@
 @section('content')
 <h3>{{ __('Registration') }}</h3>
 <hr />
-<form class="form-validate" action="{{ route('register') }}" method="POST">
+<form class="form-validate ajax-form" action="{{ route('register') }}" method="POST">
     @csrf
     <div class="form-group">
         <input id="name" type="text" name="name" required data-msg="Please enter company name"
@@ -27,11 +27,11 @@
     </div>
     <div class="form-group">
         <input id="register-password" type="password" name="password" required
-            data-msg="Please enter your password" class="input-material">
+            data-msg="Please enter a strong password" class="input-material">
         <label for="register-password" class="label-material">Password </label>
     </div>
     <div class="form-group">
-        <input id="register-password" type="password" name="password_confirmation" required data-msg="Please enter your password"
+        <input id="register-password" type="password" name="password_confirmation" required data-msg="Please re-enter above password"
             class="input-material">
         <label for="register-password" class="label-material">Password </label>
     </div>

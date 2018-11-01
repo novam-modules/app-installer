@@ -102,13 +102,31 @@
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('business.show', ['travel']) }}">
                         <i class="fa fa-caret-right"></i> Travel
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('business.show',['shop-hours']) }}">
                         <i class="fa fa-caret-right"></i> Shop Hours
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#personnel" aria-expanded="false" data-toggle="collapse">
+                 <i class="fa fa-users" aria-hidden="true"></i> Personnel
+
+            </a>
+            <ul id="personnel" class="collapse list-unstyled ">
+                <li>
+                    <a href="{{ route('personnel.index') }}">
+                        <i class="fa fa-caret-right"></i> Summary
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('personnel.show', ['id' => 'employees']) }}">
+                        <i class="fa fa-caret-right"></i> Employees
                     </a>
                 </li>
             </ul>
@@ -122,22 +140,10 @@
         </a>
         <ul id="formsDropdown" class="collapse list-unstyled ">
             <li>
-                <a href="{{ route('documedia.create') }}"> Storage </a>
+                <a href="{{ route('documedia.index') }}"> Storage </a>
             </li>
             <li>
-                <a href="forms-advanced.html">Advanced forms</a>
-            </li>
-            <li>
-                <a href="forms-autocomplete.html">Autocomplete</a>
-            </li>
-            <li>
-                <a href="forms-dropzone.html">Files upload</a>
-            </li>
-            <li>
-                <a href="forms-texteditor.html">Text editor</a>
-            </li>
-            <li>
-                <a href="forms-validation.html">Validation</a>
+                <a href="{{ route('documedia.create') }}"> Upload </a>
             </li>
         </ul>
     </li>
@@ -194,6 +200,7 @@
                 </li>
             </ul>
         </li>
+
     </ul>
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">

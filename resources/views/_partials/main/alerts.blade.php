@@ -17,6 +17,3 @@
     @endif
 
 </ul>
-@php
-    dump(session('flash'))
-@endphp

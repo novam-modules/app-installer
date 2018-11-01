@@ -477,7 +477,7 @@ nav.side-navbar ul li.active>a:hover {
 }
 
 nav.side-navbar ul li li.active>a {
-    background: #8e81f1
+    background: $primary
 }
 
 nav.side-navbar ul li ul {
@@ -2580,7 +2580,6 @@ input.input-material.is-invalid~label {
 
 .login-page .form-holder .form form {
     width: 100%;
-    max-width: 400px
 }
 
 .login-page .form-holder .form #login,

@@ -99,7 +99,7 @@
 
                             </div>
                             <div class="card-body">
-                                @include('content.dash.portal.employee')
+                                @include('content.dash.portal.onboard')
                             </div>
                         </div>
                     </div>
@@ -196,38 +196,7 @@
             --}}
         </div>
         <div class="col-lg-4">
-            <form class="card">
-                <div class="card-header">
-                    <h3 class="card-title">My Profile</h3>
-                </div>
-                <div class="card-body">
-                    <div class="row mb-3">
-                        <div class="col-auto d-flex align-items-center"><span style="background-image: url(https://d19m59y37dris4.cloudfront.net/admin-premium/1-4-4/img/avatar-7.jpg)"
-                                class="avatar avatar-lg"></span></div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label class="form-label">Name</label>
-                                <input placeholder="Your name" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Bio</label>
-                        <textarea rows="8" class="form-control">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &quot;What's happened to me?&quot; he thought. It wasn't a dream.</textarea>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input placeholder="you@domain.com" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" value="password" class="form-control">
-                    </div>
-                </div>
-                <div class="card-footer text-right">
-                    <button class="btn btn-primary">Save</button>
-                </div>
-            </form>
+            @include('content.dash.portal.employee')
         </div>
     </div>
 </section>

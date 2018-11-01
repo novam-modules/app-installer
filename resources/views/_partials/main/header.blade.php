@@ -152,8 +152,9 @@
                     <li class="nav-item dropdown">
                         <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false" class="nav-link">
-                            <img src="https://d19m59y37dris4.cloudfront.net/admin-premium/1-4-4/img/avatar-2.jpg"
-                                            alt="..." class="img-fluid rounded-circle" style="max-height:32px">
+                            <i class="fa fa-user-circle fa-2x"></i>
+                            {{--  <img src="https://d19m59y37dris4.cloudfront.net/admin-premium/1-4-4/img/avatar-2.jpg"
+                                            alt="..." class="img-fluid rounded-circle" style="max-height:32px">  --}}
                         </a>
                         <ul aria-labelledby="notifications" class="dropdown-menu">
                             <li>
