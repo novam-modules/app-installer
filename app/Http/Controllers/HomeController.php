@@ -35,6 +35,12 @@ class HomeController extends Controller
         
         if($acct->db == null || $acct->mail == null){
             return view('install');
+
+        } else {
+            setting('database', [
+                'default' => $driver = $acct->db['CONNECTION'],
+                'connections'
+            ]);            
         }
         return redirect('admin/dashboard');
     }
@@ -61,5 +67,10 @@ class HomeController extends Controller
             $error = $ex->getMessage();
             return back()->with('status', compact('error'));
         }
+    }
+
+    public function setEnv()
+    {
+
     }
 }
