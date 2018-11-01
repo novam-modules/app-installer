@@ -11,21 +11,25 @@
 
 <form method="POST" action="{{ route('password.email') }}">
     @csrf
-
-    <div class="form-group row">
-        <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-        <div class="col-md-6">
-            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-            @if ($errors->has('email'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-            @endif
-        </div>
+    <div class="form-group">
+        <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">
+        <label for="login-username" class="label-material">{{ __('E-Mail Address') }}</label>
+        @if ($errors->has('email'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
     </div>
-
+    <div class="text-center"> - OR - </div>
+    <div class="form-group">
+        <input id="login-username" type="text" name="phone" required data-msg="Please enter your username/email" class="input-material">
+        <label for="login-username" class="label-material">{{ __('Smart Phone #') }}</label>
+        @if ($errors->has('phone'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('phone') }}</strong>
+            </span>
+        @endif
+    </div>
     <div class="form-group row mb-0">
         <div class="col-md-6 offset-md-4">
             <button type="submit" class="btn btn-primary">

@@ -6,9 +6,18 @@
 <form method="POST" action="{{ route('password.update') }}">
     @csrf
 
-    <input type="hidden" name="token" value="{{ $token }}">
+    <input type="hidden" name="token" value="{{ $token }}">\
+    <div class="form-group">
+        <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">
+        <label for="login-username" class="label-material">{{ __('E-Mail Address') }}</label>
+        @if ($errors->has('email'))
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+    </div>
 
-    <div class="form-group row">
+    {{--  <div class="form-group row">
         <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
         <div class="col-md-6">
@@ -20,7 +29,7 @@
                 </span>
             @endif
         </div>
-    </div>
+    </div>  --}}
 
     <div class="form-group row">
         <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
