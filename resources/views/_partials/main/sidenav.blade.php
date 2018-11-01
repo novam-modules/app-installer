@@ -97,7 +97,7 @@
             </a>
             <ul id="operations" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('calendar.index') }}">
                         <i class="fa fa-caret-right"></i> Calendar
                     </a>
                 </li>

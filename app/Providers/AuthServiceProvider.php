@@ -26,7 +26,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
         //
         Gate::define('view-dashboard', function ($user) {
-            return $user->group_id == 1 && $user->acct_id != null;
+            return $user->group_id == -1 && $user->acct_id != null;
         });
     }
 }

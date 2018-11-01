@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
                 <div class="navbar-header">
-                    <a href="/admin" class="navbar-brand d-none d-sm-inline-block">
+                    <a href="{{ user_route('dashboard') }}" class="navbar-brand d-none d-sm-inline-block">
                         <div class="brand-text d-none d-lg-inline-block">
                             {{ config('app.name') }} <strong>APP</strong>
                         </div>
@@ -19,11 +19,13 @@
                             <strong>BD</strong>
                         </div>
                     </a>
+                    {{--  @can('view-dashboard')  --}}
                     <a id="toggle-btn" href="#" class="menu-btn active">
                         <span></span>
                         <span></span>
                         <span></span>
                     </a>
+                    {{--  @endcan  --}}
                 </div>
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                     <li class="nav-item d-flex align-items-center">

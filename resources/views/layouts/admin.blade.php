@@ -14,21 +14,26 @@
 </head>
 
 <body>
+    @component('_partials.main.alerts')
+
+    @endcomponent
     <div class="page">
         @include('_partials.main.header')
         <div class="page-content d-flex align-items-stretch">
-        @unless(request()->is("*my*"))
-            @include('_partials.main.sidenav')
-        @endunless
-            <div class="{{ request()->is('*my*')? 'container-fluid': 'content-inner' }}">
-            @hasSection('layout')
-                @yield('layout')
-            @else
-                @yield('content')
-            @endif
             @unless(request()->is("*my*"))
-                @include('_partials.main.footer')
+            @can('view-dashboard')
+            @include('_partials.main.sidenav')
+            @endcan
             @endunless
+            <div class="{{ request()->is('*my*')? 'container-fluid': 'content-inner' }}">
+                @hasSection('layout')
+                @yield('layout')
+                @else
+                @yield('content')
+                @endif
+                @unless(request()->is("*my*"))
+                @include('_partials.main.footer')
+                @endunless
             </div>
         </div>
     </div>
