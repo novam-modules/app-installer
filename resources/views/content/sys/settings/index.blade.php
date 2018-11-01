@@ -1,16 +1,17 @@
 @extends('layouts.master')
 @section('layout')
 
-<form method="post" action="{{ user_route('settings') }}">
+{{-- <form method="post" action="{{ user_route('settings') }}">
 @csrf
-
-@foreach ($Settings as $key => $value)
-<div class="form-group row">
-    <div class="col-md-6">
-      <label for="">{{ $key ?? '' }}: <strong>{{ $value ?? '' }}</strong></label>
-      <p></p>
-    </div>
-@endforeach
+@isset($Settings)
+    @foreach ($Settings as $key => $value)
+    <div class="form-group row">
+        <div class="col-md-6">
+        <label for="">{{ $key ?? '' }}: <strong>{{ $value ?? '' }}</strong></label>
+        <p></p>
+        </div>
+    @endforeach
+@endisset
 <hr class="w-100">
 
 <div class="form-group row">
@@ -25,6 +26,10 @@
       <textarea name="value" id="value" class="form-control" rows="5"></textarea>
   </div>
 </div>
-</form>
+</form> --}}
+
+
+
+@include('content.sys.settings.env', auth()->user()->account)
 
 @endsection

@@ -13,14 +13,18 @@
 
 Route::get('/', function ()
 {
-        return view('index');
-});
+            return view('index');
+}
+ );
 
 Auth::routes(['verify' => true]);
 
 Route::get('/auth', Auth\AuthController::class )->name('auth');
 
 Route::get('/home', HomeController::class )->name('home');
+
+Route::post('/install', 'HomeController@install')->name('install');
+
 
 // Route::group(['prefix' => 'admin', 'middleware' => ['web', 'admin']], function ()
 // {
@@ -30,15 +34,16 @@ Route::get('/home', HomeController::class )->name('home');
 //     Route::any('/', AdminController::class);
 // });
 
-foreach(user_routes() as $prefix){
+foreach (user_routes() as $prefix) {
 
     Route::group([
         'prefix' => $prefix, 'middleware' => ['web', 'verified', 'admin']
 
-    ], function() {
+    ], function () {
 
-        Route::any('dashboard', AdminController::class);
-        Route::resource('settings', Sys\SettingsController::class);
+        Route::any('dashboard', AdminController::class );
+        Route::resource('settings', Sys\SettingsController::class );
 
-    });
+    }
+     );
 }
