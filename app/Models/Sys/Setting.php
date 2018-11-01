@@ -17,13 +17,13 @@ class Setting extends Model
         return $query->where('acct_id', $acct_id)->get();
     }
 
-    public function setDbAttribute($db)
-    {
-        dd($db);
-    }
+    // public function setDbAttribute($db)
+    // {
+    //     dd($db);
+    // }
 
-    public function setMailAttribute($mail)
-    {
-        dd($mail);
-    }
+    // public function setMailAttribute($mail)
+    // {
+    //     dd($mail);
+    // }
 }

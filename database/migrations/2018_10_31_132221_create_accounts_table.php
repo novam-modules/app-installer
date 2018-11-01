@@ -21,6 +21,7 @@ class CreateAccountsTable extends Migration
             $table->boolean('agree')->default(false);
             $table->text('db')->nullable();
             $table->text('mail')->nullable();
+            $table->text('mods')->nullable();
             $table->timestamps();
         });
     }

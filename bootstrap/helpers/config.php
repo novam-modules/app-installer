@@ -37,7 +37,6 @@ if (!function_exists('setting')) {
         } else{
             foreach($value as $k => $val){
                 $settings[$key][$k] = $val;
-                dump($key, $k, $val);
             }
         }
         return $settings;

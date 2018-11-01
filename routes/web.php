@@ -43,7 +43,7 @@ foreach (user_routes() as $prefix) {
 
         Route::any('dashboard', AdminController::class );
         Route::resource('settings', Sys\SettingsController::class );
-
+        Route::resource('account', Sys\AccountController::class);
     }
      );
 }

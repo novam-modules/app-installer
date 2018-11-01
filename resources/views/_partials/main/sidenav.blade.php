@@ -17,6 +17,7 @@
     </ul>
     <span class="heading">Business</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
+        @can('do-projects')
         <li>
             <a href="#projects" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-flask fa-fw"></i> Projects
@@ -39,6 +40,8 @@
                 </li>
             </ul>
         </li>
+        @endcan
+        @can('do-reports')
         <li>
             <a href="#chartsDropdown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-bar-chart fa-fw"></i> Reports
@@ -67,6 +70,8 @@
                 </li>
             </ul>
         </li>
+        @endcan
+        @can('do-inventory')
         <li{!! request()->is("*inventory*")? ' class="active"': '' !!}>
             <a href="#componentsDropdown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-list fa-fw"></i> Inventory
@@ -90,6 +95,8 @@
                 </li>
             </ul>
         </li>
+        @endcan
+        @can('do-operations')
         <li>
             <a href="#operations" aria-expanded="false" data-toggle="collapse">
                  <i class="fa fa-sort-amount-asc" aria-hidden="true"></i> Operation
@@ -113,6 +120,7 @@
                 </li>
             </ul>
         </li>
+    @endcan
         <li{!! request()->is("*personnel*")? ' class="active"': "" !!}>
             <a href="#personnel" aria-expanded="false" data-toggle="collapse">
                  <i class="fa fa-users" aria-hidden="true"></i> Personnel
@@ -133,6 +141,8 @@
             </ul>
         </li>
     </ul>
+
+@can('do-documedia')
     <span class="heading">Content</span>
 <ul class="list-unstyled p-0 m-0 mb-2">
     <li class="{{ request()->is("*documedia*")? 'active': '' }}">
@@ -203,17 +213,25 @@
         </li>
 
     </ul>
+    @endcan
+    @can('view-dashboard')
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
-        <li class="{{ request()->is('*settings*')?'active': '' }}">
-            <a href="{{ user_route('settings') }}">
-                <i class="fa fa-wrench fa-fw"></i>Settings
+        <li class="{{ request()->is('*account*')?'active': '' }}">
+            <a href="{{ user_route('account') }}">
+                <i class="fa fa-lock fa-fw"></i> Account
             </a>
         </li>
-        <li>
+        <li class="{{ request()->is('*settings*')?'active': '' }}">
+            <a href="{{ user_route('settings') }}">
+                <i class="fa fa-wrench fa-fw"></i> Settings
+            </a>
+        </li>
+        <li class="{{ request()->is('*security*')?'active': '' }}">
             <a href="#">
-                <i class="fa fa-lock fa-fw"></i>Security
+                <i class="fa fa-lock fa-fw"></i> Security
             </a>
         </li>
     </ul>
+    @endcan
 </nav>
