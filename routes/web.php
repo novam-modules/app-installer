@@ -17,6 +17,7 @@ Route::get('/', function ()
 });
 
 Auth::routes(['verify' => true]);
+
 Route::get('/auth', Auth\AuthController::class )->name('auth');
 
 Route::get('/home', HomeController::class )->name('home');

@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    @component('_partials.main.alerts')
+
+    @endcomponent
     <div class="page">
         @include('_partials.main.header')
         <div class="page-content d-flex align-items-stretch">
