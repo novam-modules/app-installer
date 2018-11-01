@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterController extends Controller
+class EnrollController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -55,8 +55,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255',
+            'empno' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -69,21 +69,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
-        $User = \DB::transaction(function () use ($data) {
-            $Acct = Account::create([
-                'name'  => $data['name'],
-                'fein'  => $data['fein'],
-                'agree' => $data['agree']
-            ]);
-            return User::create([
-                'empno' => mt_rand(100000,999999),
-                'acct_id' => $Acct->id,
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-            ]);
-        });
-
-        return $User;
+        return Account::create([
+            'empno' => $data['empno'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
 }

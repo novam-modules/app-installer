@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-<h3>{{ __('Authentication') }}</h3>
+<h3>{{ __('Authorized Users') }}</h3>
 <hr />
 <form method="post" class="form-validate" action="{{ route('login') }}">
     @csrf
@@ -14,7 +14,12 @@
             class="input-material">
         <label for="login-password" class="label-material">Password</label>
     </div>
-    <button id="login" type="submit" name="registerSubmit" class="btn btn-primary">Login</button>
+    <div class="form-group terms-conditions">
+        <input id="remember-me" name="remember" type="checkbox" value="true"
+            class="checkbox-template">
+        <label for="remember-me">Remember me</label>
+    </div>
+    <button id="login" type="submit" class="btn btn-primary">Login</button>
 </form>
 <hr />
 <small>Forgot login credentials? </small>

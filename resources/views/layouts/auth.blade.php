@@ -14,15 +14,15 @@
 
 <body>
     <div class="page login-page">
-        <div class="container d-flex align-items-center justify-content-center">
+        <div class="container d-flex align-items-center">
             <div class="form-holder has-shadow">
                 <div class="row">
                     <!-- Logo & Information Panel-->
                     <div class="col-lg-6">
-                        <div class="info d-flex align-items-center">
+                        <div class="info d-flex align-items-center justify-content-center bg-primary">
                             <div class="content">
                                 <div class="logo">
-                                    <h1>{{ config('app.name') }}</h1>
+                                    <img src="{{ env('APP_LOGO') }}" class="img-fluid" alt="">
                                 </div>
                                 <p></p>
                             </div>
