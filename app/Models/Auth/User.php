@@ -27,4 +27,11 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function Account()
+    {
+        $account = $this->belongsTo(Account::class,'acct_id');
+        dump($account->toSql(), $account->getBindings());
+        return $account;
+    }
 }

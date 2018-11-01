@@ -17,7 +17,6 @@ class CreateAccountsTable extends Migration
             $table->increments('id');
             $table->integer('admin_id')->unsigned()->nullable();
             $table->string('name');
-            $table->string('email');
             $table->string('fein')->nullable();
             $table->boolean('agree')->default(false);
             $table->text('db')->nullable();

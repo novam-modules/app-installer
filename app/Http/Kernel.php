@@ -42,7 +42,6 @@ class Kernel extends HttpKernel
             'bindings',
         ],
         'admin' => [
-            "web",
             \App\Http\Middleware\ModuleAdministrator::class
         ]
     ];

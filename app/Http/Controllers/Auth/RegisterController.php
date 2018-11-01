@@ -73,8 +73,8 @@ class RegisterController extends Controller
         $User = \DB::transaction(function () use ($data) {
             $Acct = Account::create([
                 'name'  => $data['name'],
-                'fein'  => $data['fein'],
-                'agree' => $data['agree']
+                'fein'  => $data['fein'] ?? "",
+                'agree' => $data['agree'] ?? false
             ]);
             return User::create([
                 'empno' => mt_rand(100000,999999),

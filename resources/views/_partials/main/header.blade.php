@@ -165,10 +165,14 @@
                                     <span class="d-none d-sm-inline">Profile</span>
                                     <i class="fa fa-user-circle"></i>
                                 </a>
-                                <a href="#logout" class="dropdown-item  text-center logout">
-                                    <span class="d-none d-sm-inline">Logout</span>
-                                    <i class="fa fa-sign-out"></i>
-                                </a>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item  text-center logout" type="submit">
+                                        <span class="d-none d-sm-inline">Logout</span>
+                                        <i class="fa fa-sign-out"></i>
+                                    </button>
+                                </form>
+
                             </li>
                         </ul>
                     </li>

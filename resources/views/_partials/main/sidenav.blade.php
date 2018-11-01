@@ -67,24 +67,24 @@
                 </li>
             </ul>
         </li>
-        <li>
+        <li{!! request()->is("*inventory*")? ' class="active"': '' !!}>
             <a href="#componentsDropdown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-list fa-fw"></i> Inventory
 
             </a>
             <ul id="componentsDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('inventory.show', ['materials']) }}">
                         <i class="fa fa-caret-right"></i> Materials
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('inventory.show', ['fleet']) }}">
                         <i class="fa fa-caret-right"></i> Fleet
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('inventory.show', ['equipment']) }}">
                         <i class="fa fa-caret-right"></i> Equipment
                     </a>
                 </li>
@@ -116,13 +116,13 @@
     </ul>
     <span class="heading">Content</span>
 <ul class="list-unstyled p-0 m-0 mb-2">
-    <li>
+    <li class="{{ request()->is("*documedia*")? 'active': '' }}">
         <a href="#formsDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-files-o fa-fw"></i> Files
         </a>
         <ul id="formsDropdown" class="collapse list-unstyled ">
             <li>
-                <a href="{{ route('documedia.create') }}"> Upload </a>
+                <a href="{{ route('documedia.create') }}"> Storage </a>
             </li>
             <li>
                 <a href="forms-advanced.html">Advanced forms</a>
@@ -148,30 +148,43 @@
             </a>
             <ul id="pagesDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="pages-contacts.html">Contacts</a>
+                    <a href="/pagpes/home">
+                        <i class="fa fa-caret-right"></i> Home
+                    </a>
                 </li>
                 <li>
-                    <a href="login.html">Login page</a>
+                    <a href="/pages/about">
+                        <i class="fa fa-caret-right"></i> About
+                    </a>
                 </li>
                 <li>
-                    <a href="pages-profile.html">Profile</a>
+                    <a href="/pages/features">
+                        <i class="fa fa-caret-right"></i> Features
+                    </a>
                 </li>
                 <li>
-                    <a href="pages-pricing.html">Pricing table</a>
+                    <a href="/pages/pricing">
+                        <i class="fa fa-caret-right"></i> Pricing
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog/posts">
+                        <i class="fa fa-caret-right"></i> Blog
+                    </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse">
+            <a href="#formsDropDown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-file fa-fw"></i> Forms
 
             </a>
-            <ul id="pagesDropdown" class="collapse list-unstyled ">
+            <ul id="formsDropDown" class="collapse list-unstyled ">
                 <li>
-                    <a href="pages-contacts.html">Contacts</a>
+                    <a href="pages-contacts.html">Builder</a>
                 </li>
                 <li>
-                    <a href="login.html">Login page</a>
+                    <a href="login.html">Viewer</a>
                 </li>
                 <li>
                     <a href="pages-profile.html">Profile</a>
@@ -185,7 +198,7 @@
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
         <li class="{{ request()->is('*settings*')?'active': '' }}">
-            <a href="{{ route('settings') }}">
+            <a href="{{ user_route('settings') }}">
                 <i class="fa fa-wrench fa-fw"></i>Settings
             </a>
         </li>

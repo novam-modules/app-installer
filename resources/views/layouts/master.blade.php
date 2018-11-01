@@ -18,7 +18,9 @@
         @include('_partials.main.header')
         <div class="page-content d-flex align-items-stretch">
             @unless(request()->is("*my*"))
+            @can('view-dashboard')
             @include('_partials.main.sidenav')
+            @endcan
             @endunless
             <div class="{{ request()->is('*my*')? 'container-fluid': 'content-inner' }}">
             @hasSection('layout')

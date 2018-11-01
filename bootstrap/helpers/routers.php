@@ -18,10 +18,13 @@ if(!function_exists('user_route')){
     function user_route($url = null)
     {
         $url = trim($url, "/\\");
+        $url = str_replace(".", "/", $url);
 
         foreach(user_routes() as $route){
-            if(request()->is("$route*")) return $route;
+            if(request()->is("*$route*")){
+                return url("$route/$url");
+            }
         }
-        return $url;
+        return url($url);
     }
 }

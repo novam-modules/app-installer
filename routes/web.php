@@ -21,9 +21,10 @@ Route::get('/auth', Auth\AuthController::class )->name('auth');
 
 Route::get('/home', HomeController::class )->name('home');
 
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function ()
+Route::group(['prefix' => 'admin', 'middleware' => ['web', 'admin']], function ()
 {
     //This is where you can define some logic to be run before the modules are loaded!
     // return redirect('admin/dashboard');
     Route::resource('settings', Sys\SettingsController::class);
+    if(request()->is('admin')) return redirect('admin/dashboard');
 });
