@@ -32,29 +32,30 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         $acct = $user->account;
-        
-        if($acct->db == null || $acct->mail == null){
-            return view('install');
+
+        if($acct->db != null || $acct->mail != null){
+            return redirect('admin/dashboard');
 
         } else {
+            return view('install');
             // setting('database', [
             //     //Logic goes here for mail and db configurations
-            // ]);            
+            // ]);
         }
-        return redirect('admin/dashboard');
+
     }
 
     public function install(Request $request)
     {
         $user = $request->user();
-        
+
         try{
             $acct       = $user->account;
             $acct->db   = $db = $request->DB;
             $acct->mail = $mail = $request->MAIL;
-            $acct->save();           
-            
-            
+            $acct->save();
+
+
             $Setting = Setting::firstOrCreate(['acct_id' => $acct->id]);
             $Setting->update(compact('db', 'mail')+['admin_id' => $user->id]);
 

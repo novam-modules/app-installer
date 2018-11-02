@@ -60,8 +60,8 @@
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <a class="btn btn-block btn-default d-md-none" href="#space">Work
-                    Space
+                <a class="btn btn-block btn-default d-md-none" data-toggle="tab" href="#space">
+                    Work  Space
                 </a>
                 <div class="tab-pane bg-white active" id="space" role="tabpanel" aria-labelledby="space-tab">
                     <div class="card">
@@ -73,12 +73,15 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-block btn-default d-md-none" href="#home">My
+                <a class="btn btn-block btn-default d-md-none"  data-toggle="tab" href="#home">
                     Payroll
                 </a>
                 <div class="tab-pane bg-white" id="home" role="tabpanel" aria-labelledby="home-tab">
                     @include('content.dash.portal.payroll')
                 </div>
+                <a class="btn btn-block btn-default d-md-none"  data-toggle="tab" href="#profile">
+                    My Profile
+                </a>
                 <div class="tab-pane bg-white" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <form class="card">
                         <div class="card-header">
@@ -92,14 +95,23 @@
                         </div>
                     </form>
                 </div>
+                <a class="btn btn-block btn-default d-md-none"  data-toggle="tab" href="#benefits">
+                    My Benefits
+                </a>
                 <div class="tab-pane bg-white" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">
                     <br>
                     @include('content.dash.portal.benefits')
                 </div>
+                <a class="btn btn-block btn-default d-md-none"  data-toggle="tab" href="#docs">
+                    My Documents
+                </a>
                 <div class="tab-pane bg-white" id="docs" role="tabpanel" aria-labelledby="docs-tab">
                     <br>
                     @include('content.dash.portal.documents')
                 </div>
+                <a class="btn btn-block btn-default d-md-none"  data-toggle="tab" href="#welcome">
+                    Employment
+                </a>
                 <div class="tab-pane bg-white" id="welcome" role="tabpanel" aria-labelledby="welcome-tab">
 
                     <br />

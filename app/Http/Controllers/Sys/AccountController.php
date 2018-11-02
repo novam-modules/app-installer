@@ -39,16 +39,16 @@ class AccountController extends Controller
     public function store(Request $request)
     {
         //
-        $mods = $request->mods;
+       $mods = $request->mods;
        try{
             $acct = $request->user()->account;
             $acct->fill(compact('mods'))->save();
             return back()->withStatus(['success' => 'Success']);
-            
+
        } catch(\Exception $e){
             return back()->withStatus(['error' => $e->getMessage()]);
-       }           
-    
+       }
+
     }
 
     /**
@@ -60,7 +60,7 @@ class AccountController extends Controller
     public function show($id)
     {
         //
-    }   
+    }
 
     /**
      * Show the form for editing the specified resource.
