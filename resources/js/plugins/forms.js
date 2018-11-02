@@ -9,7 +9,7 @@
 
                 axios.post(this.action, postData)
                     .then( res => {
-                        $(window).html(result);
+                        window.location.reload();
                     })
                     .catch( err => {
                         console.log(err);
