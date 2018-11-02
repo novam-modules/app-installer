@@ -21,11 +21,11 @@
         @include('_partials.main.header')
         <div class="page-content d-flex align-items-stretch">
             @unless(request()->is("*my*"))
-            @can('view-dashboard')
+            @canany(['access-system', 'view-dashboard'])
             @include('_partials.main.sidenav')
-            @endcan
+            @endcanany
             @endunless
-            <div class="{{ request()->is('*my*')? 'container-fluid': 'content-inner' }}">
+            <div class="content-inner {{ request()->is('*my*')? 'w-100': '' }}">
             @hasSection('layout')
                 @yield('layout')
             @else

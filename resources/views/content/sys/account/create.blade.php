@@ -1,7 +1,8 @@
-@extends('layouts.master')
-@section('layout')
-<form action="/admin/account" method="POST" class="list-group">
+<form action="/admin/account/{{ $id ?? '' }}" method="POST" class="list-group">
     @csrf
+    @isset($id)
+    {!! method_field('PUT') !!}
+    @endisset
     <div class="list-group-item">
         <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" name="mods[projects]">
@@ -31,25 +32,3 @@
         </div>
     </div>
 </form>
-@isset($Accounts)
-@foreach($Accounts as $account)
-<div class="accordion" id="accounts-wrapper">
-  <div class="card">
-    <div class="card-header" id="heading{{ $account->id }}">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ $account->id }}" aria-expanded="false" aria-controls="collapse{{ $account->id }}">
-          {{ $loop->iteration }} -- {{ $account->name ?? ''}}
-        </button>
-      </h5>
-    </div>
-    <div id="collapse{{ $account->id }}" class="collapse" aria-labelledby="heading{{ $account->id }}" data-parent="#accounts-wrapper">
-      <div class="card-body">
-            @include('content.sys.account.create', $account);
-      </div>
-    </div>
-  </div>
-</div>
-@endforeach
-
-@endisset
-@endsection

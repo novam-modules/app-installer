@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Sys;
 
+use App\Models\Auth\Account;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,6 +16,7 @@ class AccountController extends Controller
     public function index()
     {
         //
+        $Accounts = Account::where('id', '!=', auth()->user()->account_id);
         return view('content.sys.account.index', get_defined_vars());
     }
 

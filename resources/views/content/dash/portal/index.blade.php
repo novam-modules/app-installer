@@ -18,7 +18,7 @@
 </div>
 <section>
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs d-none d-md-flex" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -49,6 +49,11 @@
                 <li class="nav-item">
                     <a class="nav-link" id="welcome-tab" data-toggle="tab" href="#welcome" role="tab" aria-controls="welcome"
                         aria-selected="false">Employment
+                    </a>
+                </li>
+                <li class="nav-item ml-auto">
+                    <a class="nav-link" href="#my-profile" data-toggle="collapse">
+                        <i class="material-icons">swap_horiz</i>
                     </a>
                 </li>
             </ul>
@@ -116,7 +121,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4 collapse show fade" id="my-profile">
             @include('content.dash.portal.employee')
         </div>
     </div>

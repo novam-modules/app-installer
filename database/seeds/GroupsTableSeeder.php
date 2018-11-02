@@ -14,7 +14,8 @@ class GroupsTableSeeder extends Seeder
     {
         //
         $groups = [
-            ['name' => 'Admin', 'id' => 1],
+            ['name' => 'User', 'id' => 1],
+            ['name' => 'Admin', 'id' => 99],
             ['name' => 'Super', 'id' => 999]
         ];
         foreach ($groups as $group)

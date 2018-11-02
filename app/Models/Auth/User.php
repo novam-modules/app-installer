@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'acct_id', 'empno', 'email', 'sec_email','password',
+        'account_id',  'group_id', 'empno', 'email', 'sec_email','password',
     ];
 
     /**
@@ -32,8 +32,8 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function Account()
     {
-        $relation = $this->belongsTo(Account::class,'acct_id');
-        //dump($relation->toSql(), $relation->getBindings());
+        $relation = $this->belongsTo(Account::class);
+        // dump($relation->toSql(), $relation->getBindings());
         return $relation;
     }
 

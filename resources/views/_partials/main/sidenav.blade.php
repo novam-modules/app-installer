@@ -124,10 +124,8 @@
         <li{!! request()->is("*personnel*")? ' class="active"': "" !!}>
             <a href="#personnel" aria-expanded="false" data-toggle="collapse">
                  <i class="fa fa-users" aria-hidden="true"></i> Personnel
-
             </a>
             <ul id="personnel" class="collapse list-unstyled ">
-                    <a href="{{  route('projects.create') }}">
                 <li{!! request()->is("*personnel")? ' class="active"': "" !!}>
                     <a href="{{ route('personnel.index') }}">
                         <i class="fa fa-caret-right"></i> Summary
@@ -217,11 +215,13 @@
     @can('view-dashboard')
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
+        @can('access-system')
         <li class="{{ request()->is('*account*')?'active': '' }}">
             <a href="{{ user_route('account') }}">
                 <i class="fa fa-lock fa-fw"></i> Account
             </a>
         </li>
+        @endcan
         <li class="{{ request()->is('*settings*')?'active': '' }}">
             <a href="{{ user_route('settings') }}">
                 <i class="fa fa-wrench fa-fw"></i> Settings

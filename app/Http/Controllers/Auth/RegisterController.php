@@ -77,10 +77,10 @@ class RegisterController extends Controller
                 'agree' => $data['agree'] ?? false
             ]);
             $User = User::create([
-                'empno'    => mt_rand(100000,999999),
-                'acct_id'  => $Acct->id,
-                'email'    => $data['email'],
-                'password' => Hash::make($data['password']),
+                'empno'         => mt_rand(100000,999999),
+                'account_id'    => $Acct->id,
+                'email'         => $data['email'],
+                'password'      => Hash::make($data['password']),
             ]);
 
             $Acct->fill(['admin_id' => $User->id])->save();

@@ -37,10 +37,9 @@ class HomeController extends Controller
             return view('install');
 
         } else {
-            setting('database', [
-                'default' => $driver = $acct->db['CONNECTION'],
-                'connections'
-            ]);            
+            // setting('database', [
+            //     //Logic goes here for mail and db configurations
+            // ]);            
         }
         return redirect('admin/dashboard');
     }

@@ -25,8 +25,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
         //
+
+        Gate::define('access-system', function ($user) {
+            return $user->group_id == 999;
+        });
         Gate::define('view-dashboard', function ($user) {
-            return $user->group_id == -1 && $user->acct_id != null;
+            return $user->group_id > 1;
         });
 
         Gate::define('do-inventory', function ($user) {
