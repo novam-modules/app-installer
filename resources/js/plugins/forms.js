@@ -13,6 +13,7 @@
                     })
                     .catch( err => {
                         console.log(err);
+                        if(!err.response) return;
                         let data = err.response.data;
                         let message = data.message;
 
