@@ -4,29 +4,21 @@
             $('.ajax-form', document).submit(function(e){
                 e.preventDefault();
 
-                let self = this, postData = {}, formData = $(this).serializeArray();
-                formData.forEach( input => postData[input.name] = input.value );
+                let post = {}, form = $(this);
+                var data = form.serializeArray();
+                data.forEach( inp => post[inp.name] = inp.value);
 
-                axios.post(this.action, postData)
+                axios.post(this.action, post)
                     .then( res => {
-                        window.location.reload();
+                        window.reload();
                     })
                     .catch( err => {
-                        console.log(err);
-                        if(!err.response) return;
-                        let data = err.response.data;
-                        let message = data.message;
-
-                        _.forOwn(data.errors, (value, name) => {
-
-                            let input = $(self).find('[name="'+name+'"]');
-                            let error = _.isArray(value)? value.join('<br />'): value;
-                            input.removeClass('is-valid').addClass('is-invalid');
-                            if(input.parent().find('.invalid-feedback').length == 0){
-                                input.parent().append('<div class="invalid-feedback"/>');
-                            }
-                            input.parent().find('.invalid-feedback').last().html(error).show();
-
+                        let errors = err.response.data.errors;
+                        _.forOwn(errors, function (value, key) {
+                            let input = form.find('[name="'+name+'"]');
+                            input.addClass('is-invalid');
+                            input.next('.invalid-feedback').text(value.join('<br/>'));
+                            console.log(value, key);
                         });
                     });
             });
