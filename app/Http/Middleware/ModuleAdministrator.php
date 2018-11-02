@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\Models\Sys\Setting;
+use Illuminate\Support\Facades\Config;
 
 class ModuleAdministrator
 {
@@ -15,6 +17,10 @@ class ModuleAdministrator
      */
     public function handle($request, Closure $next)
     {
+        $acct = $request->user()->account;
+        if($acct->db == null || $acct->mail == null){
+            return redirect('home');
+        }
         return $next($request);
     }
 }

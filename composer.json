@@ -53,17 +53,26 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
         ],
-        "install-modules-cmd": [
+        "pre-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.dev', '.env');\"",
+            "rm -rf modules/*"
+        ],
+        "post-install-cmd": [
             "cd modules/ && git clone https://github.com/novam-modules/documedia.git",
             "cd modules/ && git clone https://github.com/novam-modules/projects.git",
-            "cd modules/ && git clone https://github.com/novam-modules/dashboard.git",
+            "cd modules/ && git clone https://github.com/novam-modules/reporter.git",
             "cd modules/ && git clone https://github.com/novam-modules/thirdparty.git",
             "cd modules/ && git clone https://github.com/novam-modules/business.git",
-            "cd modules/ && git clone https://github.com/novam-modules/personell.git",
-            "cd modules/ && git clone https://github.com/novam-modules/timetrack.git",
+            "cd modules/ && git clone https://github.com/novam-modules/personnel.git",
+            "cd modules/ && git clone https://github.com/novam-modules/timetracker.git",
             "cd modules/ && git clone https://github.com/novam-modules/inventory.git",
-            "cd modules/ && git clone https://github.com/novam-modules/calendar.git"
+            "cd modules/ && git clone https://github.com/novam-modules/calendar.git",
+            "npm install && npm run watch"
+        ],
+        "post-status-cmd": [
+            "@php artisan serve --port=3366 && start \"\" http://127.0.0.1:3366"
         ]
+
     },
     "config": {
         "preferred-install": "dist",

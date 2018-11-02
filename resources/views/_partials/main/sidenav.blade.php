@@ -17,6 +17,7 @@
     </ul>
     <span class="heading">Business</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
+        @can('do-projects')
         <li>
             <a href="#projects" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-flask fa-fw"></i> Projects
@@ -39,6 +40,8 @@
                 </li>
             </ul>
         </li>
+        @endcan
+        @can('do-reports')
         <li>
             <a href="#chartsDropdown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-bar-chart fa-fw"></i> Reports
@@ -67,29 +70,33 @@
                 </li>
             </ul>
         </li>
-        <li>
+        @endcan
+        @can('do-inventory')
+        <li{!! request()->is("*inventory*")? ' class="active"': '' !!}>
             <a href="#componentsDropdown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-list fa-fw"></i> Inventory
 
             </a>
             <ul id="componentsDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('inventory.show', ['materials']) }}">
                         <i class="fa fa-caret-right"></i> Materials
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('inventory.show', ['fleet']) }}">
                         <i class="fa fa-caret-right"></i> Fleet
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('inventory.show', ['equipment']) }}">
                         <i class="fa fa-caret-right"></i> Equipment
                     </a>
                 </li>
             </ul>
         </li>
+        @endcan
+        @can('do-operations')
         <li>
             <a href="#operations" aria-expanded="false" data-toggle="collapse">
                  <i class="fa fa-sort-amount-asc" aria-hidden="true"></i> Operation
@@ -97,47 +104,57 @@
             </a>
             <ul id="operations" class="collapse list-unstyled ">
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('calendar.index') }}">
                         <i class="fa fa-caret-right"></i> Calendar
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('business.show', ['travel']) }}">
                         <i class="fa fa-caret-right"></i> Travel
                     </a>
                 </li>
                 <li>
-                    <a href="components-cards.html">
+                    <a href="{{ route('business.show',['shop-hours']) }}">
                         <i class="fa fa-caret-right"></i> Shop Hours
                     </a>
                 </li>
             </ul>
         </li>
+    @endcan
+        <li{!! request()->is("*personnel*")? ' class="active"': "" !!}>
+            <a href="#personnel" aria-expanded="false" data-toggle="collapse">
+                 <i class="fa fa-users" aria-hidden="true"></i> Personnel
+
+            </a>
+            <ul id="personnel" class="collapse list-unstyled ">
+                    <a href="{{  route('projects.create') }}">
+                <li{!! request()->is("*personnel")? ' class="active"': "" !!}>
+                    <a href="{{ route('personnel.index') }}">
+                        <i class="fa fa-caret-right"></i> Summary
+                    </a>
+                </li>
+                <li{!! request()->is("*personnel/*")? ' class="active"': "" !!}>
+                    <a href="{{ route('personnel.show', ['id' => 'employees']) }}">
+                        <i class="fa fa-caret-right"></i> Employees
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
+
+@can('do-documedia')
     <span class="heading">Content</span>
 <ul class="list-unstyled p-0 m-0 mb-2">
-    <li>
+    <li class="{{ request()->is("*documedia*")? 'active': '' }}">
         <a href="#formsDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-files-o fa-fw"></i> Files
         </a>
         <ul id="formsDropdown" class="collapse list-unstyled ">
             <li>
+                <a href="{{ route('documedia.index') }}"> Storage </a>
+            </li>
+            <li>
                 <a href="{{ route('documedia.create') }}"> Upload </a>
-            </li>
-            <li>
-                <a href="forms-advanced.html">Advanced forms</a>
-            </li>
-            <li>
-                <a href="forms-autocomplete.html">Autocomplete</a>
-            </li>
-            <li>
-                <a href="forms-dropzone.html">Files upload</a>
-            </li>
-            <li>
-                <a href="forms-texteditor.html">Text editor</a>
-            </li>
-            <li>
-                <a href="forms-validation.html">Validation</a>
             </li>
         </ul>
     </li>
@@ -148,30 +165,43 @@
             </a>
             <ul id="pagesDropdown" class="collapse list-unstyled ">
                 <li>
-                    <a href="pages-contacts.html">Contacts</a>
+                    <a href="/pagpes/home">
+                        <i class="fa fa-caret-right"></i> Home
+                    </a>
                 </li>
                 <li>
-                    <a href="login.html">Login page</a>
+                    <a href="/pages/about">
+                        <i class="fa fa-caret-right"></i> About
+                    </a>
                 </li>
                 <li>
-                    <a href="pages-profile.html">Profile</a>
+                    <a href="/pages/features">
+                        <i class="fa fa-caret-right"></i> Features
+                    </a>
                 </li>
                 <li>
-                    <a href="pages-pricing.html">Pricing table</a>
+                    <a href="/pages/pricing">
+                        <i class="fa fa-caret-right"></i> Pricing
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog/posts">
+                        <i class="fa fa-caret-right"></i> Blog
+                    </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#pagesDropdown" aria-expanded="false" data-toggle="collapse">
+            <a href="#formsDropDown" aria-expanded="false" data-toggle="collapse">
                 <i class="fa fa-file fa-fw"></i> Forms
 
             </a>
-            <ul id="pagesDropdown" class="collapse list-unstyled ">
+            <ul id="formsDropDown" class="collapse list-unstyled ">
                 <li>
-                    <a href="pages-contacts.html">Contacts</a>
+                    <a href="pages-contacts.html">Builder</a>
                 </li>
                 <li>
-                    <a href="login.html">Login page</a>
+                    <a href="login.html">Viewer</a>
                 </li>
                 <li>
                     <a href="pages-profile.html">Profile</a>
@@ -181,18 +211,27 @@
                 </li>
             </ul>
         </li>
+
     </ul>
+    @endcan
+    @can('view-dashboard')
     <span class="heading">System</span>
     <ul class="list-unstyled p-0 m-0 mb-2">
-        <li class="{{ request()->is('*settings*')?'active': '' }}">
-            <a href="{{ user_route('settings') }}">
-                <i class="fa fa-wrench fa-fw"></i>Settings
+        <li class="{{ request()->is('*account*')?'active': '' }}">
+            <a href="{{ user_route('account') }}">
+                <i class="fa fa-lock fa-fw"></i> Account
             </a>
         </li>
-        <li>
+        <li class="{{ request()->is('*settings*')?'active': '' }}">
+            <a href="{{ user_route('settings') }}">
+                <i class="fa fa-wrench fa-fw"></i> Settings
+            </a>
+        </li>
+        <li class="{{ request()->is('*security*')?'active': '' }}">
             <a href="#">
-                <i class="fa fa-lock fa-fw"></i>Security
+                <i class="fa fa-lock fa-fw"></i> Security
             </a>
         </li>
     </ul>
+    @endcan
 </nav>

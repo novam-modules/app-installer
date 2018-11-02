@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
                 <div class="navbar-header">
-                    <a href="/admin" class="navbar-brand d-none d-sm-inline-block">
+                    <a href="{{ user_route('dashboard') }}" class="navbar-brand d-none d-sm-inline-block">
                         <div class="brand-text d-none d-lg-inline-block">
                             {{ config('app.name') }} <strong>APP</strong>
                         </div>
@@ -19,11 +19,13 @@
                             <strong>BD</strong>
                         </div>
                     </a>
+                    {{--  @can('view-dashboard')  --}}
                     <a id="toggle-btn" href="#" class="menu-btn active">
                         <span></span>
                         <span></span>
                         <span></span>
                     </a>
+                    {{--  @endcan  --}}
                 </div>
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                     <li class="nav-item d-flex align-items-center">
@@ -150,8 +152,9 @@
                     <li class="nav-item dropdown">
                         <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false" class="nav-link">
-                            <img src="https://d19m59y37dris4.cloudfront.net/admin-premium/1-4-4/img/avatar-2.jpg"
-                                            alt="..." class="img-fluid rounded-circle" style="max-height:32px">
+                            <i class="fa fa-user-circle fa-2x"></i>
+                            {{--  <img src="https://d19m59y37dris4.cloudfront.net/admin-premium/1-4-4/img/avatar-2.jpg"
+                                            alt="..." class="img-fluid rounded-circle" style="max-height:32px">  --}}
                         </a>
                         <ul aria-labelledby="notifications" class="dropdown-menu">
                             <li>
@@ -165,10 +168,14 @@
                                     <span class="d-none d-sm-inline">Profile</span>
                                     <i class="fa fa-user-circle"></i>
                                 </a>
-                                <a href="#logout" class="dropdown-item  text-center logout">
-                                    <span class="d-none d-sm-inline">Logout</span>
-                                    <i class="fa fa-sign-out"></i>
-                                </a>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item  text-center logout" type="submit">
+                                        <span class="d-none d-sm-inline">Logout</span>
+                                        <i class="fa fa-sign-out"></i>
+                                    </button>
+                                </form>
+
                             </li>
                         </ul>
                     </li>

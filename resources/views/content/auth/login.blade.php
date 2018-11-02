@@ -3,7 +3,7 @@
 @section('content')
 <h3>{{ __('Authorized Users') }}</h3>
 <hr />
-<form method="post" class="form-validate" action="{{ route('login') }}">
+<form method="POST" class="form-validate ajax-form" action="{{ route('login') }}">
     @csrf
     <div class="form-group">
         <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">
