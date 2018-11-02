@@ -78,6 +78,7 @@ class RegisterController extends Controller
             ]);
             $User = User::create([
                 'empno'         => mt_rand(100000,999999),
+                'group_id'      => 99,
                 'account_id'    => $Acct->id,
                 'email'         => $data['email'],
                 'password'      => Hash::make($data['password']),

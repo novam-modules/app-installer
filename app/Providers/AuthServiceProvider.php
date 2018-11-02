@@ -35,23 +35,23 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::define('do-inventory', function ($user) {
             $mods = $user->account->mods;
-            return $mods && isset($mods['inventory']);
+            return $mods == "all" || ($mods && isset($mods['inventory']));
         });
         Gate::define('do-project', function ($user) {
             $mods = $user->account->mods;
-            return $mods && isset($mods['projects']);
+            return $mods == "all" || ($mods && isset($mods['projects']));
         });
         Gate::define('do-reports', function ($user) {
             $mods = $user->account->mods;
-            return $mods && isset($mods['reports']);
+            return $mods == "all" || ($mods && isset($mods['reports']));
         });
         Gate::define('do-operations', function ($user) {
             $mods = $user->account->mods;
-            return $mods && isset($mods['operations']);
+            return $mods == "all" || ($mods && isset($mods['operations']));
         });
         Gate::define('do-documedia', function ($user) {
             $mods = $user->account->mods;
-            return $mods && isset($mods['documedia']);
+            return $mods == "all" || ($mods && isset($mods['documedia']));
         });
     }
 }
