@@ -9,7 +9,7 @@
     </div>
 @endif
 
-<form method="POST" action="{{ route('password.email') }}">
+<form method="POST" action="{{ route('password.email') }}" class="form-validate ajax-form">
     @csrf
     <div class="form-group">
         <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">
@@ -22,7 +22,7 @@
     </div>
     <div class="text-center"> - OR - </div>
     <div class="form-group">
-        <input id="login-username" type="text" name="phone" required data-msg="Please enter your username/email" class="input-material">
+        <input id="login-username" type="text" name="phone" class="input-material">
         <label for="login-username" class="label-material">{{ __('Smart Phone #') }}</label>
         @if ($errors->has('phone'))
             <span class="invalid-feedback" role="alert">

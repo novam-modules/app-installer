@@ -3,7 +3,7 @@
 @section('content')
 <div>{{ __('Reset Password') }}</div>
 <hr />
-<form method="POST" action="{{ route('password.update') }}">
+<form method="POST" action="{{ route('password.update') }}" class="form-validate ajax-form">
     @csrf
 
     <input type="hidden" name="token" value="{{ $token }}">\
