@@ -14,7 +14,7 @@
     </div>
     @endif
 
-<form method="POST" action="{{ route('password.email') }}" class="form-validate ajax-form">
+<form method="POST" action="{{ route('password.email') }}" class="">
     @csrf
     <div class="form-group">
         <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">
