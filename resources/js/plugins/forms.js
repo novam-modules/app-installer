@@ -10,7 +10,7 @@
 
                 axios.post(this.action, post)
                     .then( res => {
-                        window.reload();
+                        window.location.reload();
                     })
                     .catch( err => {
                         let errors = err.response.data.errors;

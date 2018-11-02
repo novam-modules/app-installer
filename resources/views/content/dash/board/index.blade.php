@@ -5,7 +5,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="item d-flex align-items-center">
                     <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><span>New<br>Clients</span>
+                    <div class="title"><span>New<br>Customers</span>
                         <div class="progress">
                             <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0"
                                 aria-valuemax="100" class="progress-bar bg-violet"></div>
@@ -59,7 +59,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="item d-flex align-items-center">
                     <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><span>New<br>Clients</span>
+                    <div class="title"><span>New<br>Services</span>
                         <div class="progress">
                             <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0"
                                 aria-valuemax="100" class="progress-bar bg-violet"></div>
@@ -72,13 +72,13 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="item d-flex align-items-center">
                     <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                    <div class="title"><span>Work<br>Orders</span>
+                    <div class="title"><span>IT<br>Requests</span>
                         <div class="progress">
                             <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0"
                                 aria-valuemax="100" class="progress-bar bg-red"></div>
                         </div>
                     </div>
-                    <div class="number"><strong>70</strong></div>
+                    <div class="number"><strong>12</strong></div>
                 </div>
             </div>
             <!-- Item -->
@@ -98,7 +98,7 @@
             <div class="col-xl-3 col-sm-6">
                 <div class="item d-flex align-items-center">
                     <div class="icon bg-orange"><i class="icon-check"></i></div>
-                    <div class="title"><span>Open<br>Cases</span>
+                    <div class="title"><span>Open<br>Tickets</span>
                         <div class="progress">
                             <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0"
                                 aria-valuemax="100" class="progress-bar bg-orange"></div>
@@ -118,15 +118,15 @@
             <div class="statistics col-lg-3 col-12">
                 <div class="statistic d-flex align-items-center bg-white has-shadow">
                     <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
-                    <div class="text"><strong>234</strong><br><small>Applications</small></div>
+                    <div class="text"><strong>56</strong><br><small>Applications</small></div>
                 </div>
                 <div class="statistic d-flex align-items-center bg-white has-shadow">
                     <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                    <div class="text"><strong>152</strong><br><small>Interviews</small></div>
+                    <div class="text"><strong>10</strong><br><small>Interviews</small></div>
                 </div>
                 <div class="statistic d-flex align-items-center bg-white has-shadow">
                     <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-                    <div class="text"><strong>147</strong><br><small>Forwards</small></div>
+                    <div class="text"><strong>147</strong><br><small>Hires</small></div>
                 </div>
             </div>
             <!-- Line Chart            -->
@@ -272,7 +272,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3>Work Hours</h3><small>Lorem ipsum dolor sit amet.</small>
+                        <h3>Days Since Last Accident</h3><small>Lorem ipsum dolor sit amet.</small>
                         <div class="chart text-center">
                             <div class="text"><strong>90</strong><br><span>Hours</span></div>
                             <canvas id="pieChart"></canvas>
@@ -283,6 +283,7 @@
             <!-- Client Profile -->
             <div class="col-lg-4">
                 <div class="client card">
+
                     <div class="card-close">
                         <div class="dropdown">
                             <button type="button" id="closeCard2" data-toggle="dropdown" aria-haspopup="true"
@@ -298,19 +299,15 @@
                             <div class="status bg-green"></div>
                         </div>
                         <div class="client-title">
-                            <h3>Jason Doe</h3><span>Web Developer</span><a href="#">Follow</a>
+                            <h3>Jason Doe</h3><span>Web Developer</span><a href="#">Congratulate!</a>
                         </div>
                         <div class="client-info">
                             <div class="row">
-                                <div class="col-4"><strong>20</strong><br><small>Photos</small></div>
-                                <div class="col-4"><strong>54</strong><br><small>Videos</small></div>
+                                <div class="col-4"><strong>2</strong><br><small>Years</small></div>
+                                <div class="col-4"><strong>2</strong><br><small>Times</small></div>
                                 <div class="col-4"><strong>235</strong><br><small>Tasks</small></div>
                             </div>
                         </div>
-                        <div class="client-social d-flex justify-content-between"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a><a
-                                href="#" target="_blank"><i class="fa fa-twitter"></i></a><a href="#" target="_blank"><i
-                                    class="fa fa-google-plus"></i></a><a href="#" target="_blank"><i class="fa fa-instagram"></i></a><a
-                                href="#" target="_blank"><i class="fa fa-linkedin"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -327,7 +324,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h3>Total Overdue</h3><small>Lorem ipsum dolor sit amet.</small>
+                        <h3>Profit Sharing</h3><small>Lorem ipsum dolor sit amet.</small>
                         <div class="number text-center">$20,000</div>
                         <div class="chart">
                             <canvas id="lineChart1"> </canvas>
