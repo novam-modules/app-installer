@@ -17,11 +17,11 @@
         @endif
     </div>
     <div class="form-group">
-        <input id="login-password" type="password" name="email" required data-msg="Please enter strong password" class="input-material">
+        <input id="login-password" type="password" name="password" required data-msg="Please enter strong password" class="input-material">
         <label for="login-password" class="label-material">{{ __('Strong Password') }}</label>
-        @if ($errors->has('email'))
+        @if ($errors->has('password'))
             <span class="invalid-feedback" role="alert">
-                <strong>{{ $errors->first('email') }}</strong>
+                <strong>{{ $errors->first('passowrd') }}</strong>
             </span>
         @endif
     </div>

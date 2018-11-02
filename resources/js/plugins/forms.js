@@ -9,7 +9,7 @@
 
                 axios.post(this.action, postData)
                     .then( res => {
-                        window.location.reload()
+                        $(window).html(result);
                     })
                     .catch( err => {
                         let data = err.response.data;
@@ -20,7 +20,9 @@
                             let input = $(self).find('[name="'+name+'"]');
                             let error = _.isArray(value)? value.join('<br />'): value;
                             input.removeClass('is-valid').addClass('is-invalid');
-                            input.parent().append('<div class="invalid-feedback"/>');
+                            if(input.parent().find('.invalid-feedback').length == 0){
+                                input.parent().append('<div class="invalid-feedback"/>');
+                            }
                             input.parent().find('.invalid-feedback').last().html(error).show();
 
                         });
