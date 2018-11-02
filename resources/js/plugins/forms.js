@@ -12,6 +12,7 @@
                         $(window).html(result);
                     })
                     .catch( err => {
+                        console.log(err);
                         let data = err.response.data;
                         let message = data.message;
 
