@@ -16,7 +16,8 @@ class AccountController extends Controller
     public function index()
     {
         //
-        $Accounts = Account::where('id', '!=', auth()->user()->account_id);
+        $Accounts = Account::where('id', '!=', auth()->user()->account_id)->get();
+        dump($Accounts);
         return view('content.sys.account.index', get_defined_vars());
     }
 

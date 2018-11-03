@@ -8,13 +8,8 @@
         {{ session('status') }}
     </div>
 @endif
-@if (session('status'))
-    <div class="alert alert-success" role="alert">
-        {{ session('status') }}
-    </div>
-    @endif
 
-<form method="POST" action="{{ route('password.email') }}" class="">
+<form method="POST" action="{{ route('password.email') }}" class="form-validate">
     @csrf
     <div class="form-group">
         <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">

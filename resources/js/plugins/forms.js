@@ -1,25 +1,41 @@
 (function($){
     $(function(){
 
-            $('.ajax-form', document).submit(function(e){
+            $('.form-validate', document).submit(function(e){
                 e.preventDefault();
 
-                let post = {}, form = $(this);
-                var data = form.serializeArray();
-                data.forEach( inp => post[inp.name] = inp.value);
+                let self = this;
+                let data = $(this).serialize();
+                let action = $(this).find('[type="submit"]');
+                let actionTxt = action.val();
 
-                axios.post(this.action, post)
+                action.val('<i class="fa fa-spin fa-spinner"></i> Sending...');
+
+                axios.post(self.action, data)
                     .then( res => {
                         window.location.reload();
                     })
                     .catch( err => {
                         let errors = err.response.data.errors;
-                        _.forOwn(errors, function (value, key) {
-                            let input = form.find('[name="'+name+'"]');
-                            input.addClass('is-invalid');
-                            input.next('.invalid-feedback').text(value.join('<br/>'));
-                            console.log(value, key);
+                        _.forOwn(errors, function(error, name) {
+                            error = _.isArray(error) ? error.join('<br/>'): error;
+
+                            let input = $(self).find('[name="'+name+'"]');
+                            let feedback = input.parent().find('.invalid-feedback');
+
+                            if (feedback.length === 0){
+                                input.parent().append('<div class="invalid-feedback" />');
+                            }
+
+                            input.removeClass('is-valid').addClass('is-invalid');
+                            input.parent().find('.invalid-feedback').show().html(error);
                         });
+                    })
+                    .then( data => {
+                        console.log(data);
+                        setTimeout(() => {
+                            action.val(actionTxt);
+                        }, 3000);
                     });
             });
     });

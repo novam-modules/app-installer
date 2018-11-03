@@ -3,7 +3,7 @@
 @section('content')
 <h3>{{ __('Registration') }}</h3>
 <hr />
-<form class="" action="{{ route('register') }}" method="POST">
+<form class="form-validate" action="{{ route('register') }}" method="POST">
     @csrf
     <div class="form-group">
         <input id="name" type="text" name="name" required data-msg="Please enter company name"

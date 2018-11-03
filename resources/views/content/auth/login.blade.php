@@ -3,11 +3,16 @@
 @section('content')
 <h3>{{ __('Authorized Users') }}</h3>
 <hr />
-<form method="POST" class="form-validate ajax-form" action="{{ route('login') }}">
+<form method="POST" class="form-validate" action="{{ route('login') }}">
     @csrf
     <div class="form-group">
         <input id="login-username" type="text" name="email" required data-msg="Please enter your username/email" class="input-material">
         <label for="login-username" class="label-material">User Name</label>
+        @if ($errors->has('email'))
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('email') }}</strong>
+        </span>
+        @endif
     </div>
     <div class="form-group">
         <input id="login-password" type="password" name="password" required data-msg="Please enter your password"
