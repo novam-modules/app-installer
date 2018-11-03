@@ -1,8 +1,8 @@
 <form action="{{ route('install') }}" method="POST" class="form-validate row">
     @csrf
     <fieldset class="col">
-        <div class="form-group">
-            <a href="#" onclick="$(this).next().prop('disabled', true).parent().next(prop('disabled', true)"></a>
+        <div class="form-group pt-2">
+            <button class="btn btn-primary btn-block" type="submit">Use Our Settings</button>
         </div>
         <div class="form-group">
             <input type="text" name="DB[CONNECTION]" id="" class="input-material" value="{{ $db['CONNECTION'] ?? old('DB.CONNECTION') }}" aria-describedby="DB_CONNECTION">

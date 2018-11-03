@@ -7,13 +7,18 @@
                 let self = this;
                 let data = $(this).serialize();
                 let action = $(this).find('[type="submit"]');
-                let actionTxt = action.val();
+                let actionTxt = action.html();
 
-                action.val('<i class="fa fa-spin fa-spinner"></i> Sending...');
+                action.html('<i class="fa fa-spin fa-spinner"></i> Sending...');
 
                 axios.post(self.action, data)
                     .then( res => {
-                        window.location.reload();
+                        let respURL = res.request.responseURL;
+                        let currURL = window.location.href;
+
+                        if(respURL != currURL){
+                            window.location.href =  respURL;
+                        }
                     })
                     .catch( err => {
                         let errors = err.response.data.errors;
@@ -32,10 +37,9 @@
                         });
                     })
                     .then( data => {
-                        console.log(data);
                         setTimeout(() => {
-                            action.val(actionTxt);
-                        }, 3000);
+                            action.html(actionTxt);
+                        }, 1000);
                     });
             });
     });
