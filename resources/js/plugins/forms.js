@@ -18,6 +18,9 @@
 
                         if(respURL != currURL){
                             window.location.href =  respURL;
+
+                        } else{
+                            window.location.reload();
                         }
                     })
                     .catch( err => {
