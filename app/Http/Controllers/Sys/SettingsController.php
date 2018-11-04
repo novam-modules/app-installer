@@ -28,4 +28,13 @@ class SettingsController extends Controller
         Setting::create($data);
         return back()->with('success', 'Nicely done!');
     }
+
+    public function update(Request $request)
+    {
+        $data = $request->except('_token');
+        $data['user_id'] = $request->user()->id;
+        $data['acct_id'] = $request->user()->acct_id;
+        Setting::create($data);
+        return back()->with('success', 'Nicely done!');
+    }
 }

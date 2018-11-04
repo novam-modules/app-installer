@@ -17,7 +17,6 @@ class AccountController extends Controller
     {
         //
         $Accounts = Account::where('id', '!=', auth()->user()->account_id)->get();
-        dump($Accounts);
         return view('content.sys.account.index', get_defined_vars());
     }
 
@@ -84,6 +83,16 @@ class AccountController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $mods = $request->mods;
+        try{
+                $acct = $request->user()->account;
+                $acct->fill(compact('mods'))->save();
+                return back()->withStatus(['success' => 'Success']);
+
+        } catch(\Exception $e){
+                return back()->withStatus(['error' => $e->getMessage()]);
+        }
+
     }
 
     /**

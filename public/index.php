@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Config;
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

@@ -31,15 +31,19 @@
 
 
 <div class="card-deck login-page">
-    <div class="card form-holder">
+    <div class="card col-sm-12 col-md-4">
         <div class="card-body">
-            @include('content.sys.settings.env', auth()->user()->account)
+            <form action="">
+                @include('content.sys.settings.db', auth()->user()->account)
+            </form>
         </div>
     </div>
-    <div class="card">
+    <div class="card col-sm-12 col-md-4">
         <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
+        </div>
+    </div>
+    <div class="card col-sm-12 col-md-4">
+        <div class="card-body">
         </div>
     </div>
 </div>

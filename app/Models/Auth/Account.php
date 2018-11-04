@@ -8,10 +8,10 @@ class Account extends Model
 {
     //
     protected $fillable = [
-        'name', 'fein', 'admin_id', 'db', 'mail', 'user_id', 'mods'
+        'name', 'fein', 'admin_id', 'db', 'mail', 'user_id', 'mods', 'file'
     ];
 
     protected $casts = [
-        'db' => 'array', 'mail' => 'array', 'mods' => 'array'
+        'db' => 'array', 'mail' => 'array', 'mods' => 'array', 'file' => 'array'
     ];
 }

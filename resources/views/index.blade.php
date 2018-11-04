@@ -79,6 +79,7 @@ margin-bottom: 30px;
                 <a href="{{ url('/home') }}">ADMIN</a>
             @else
                 <a href="/auth">ENTER</a>
+                <a href="/register">JOIN</a>
             @endauth
 
         </div>

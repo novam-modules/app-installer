@@ -13,7 +13,7 @@ class CreateAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::connection('system')->create('accounts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('admin_id')->unsigned()->nullable();
             $table->string('name');
@@ -21,6 +21,7 @@ class CreateAccountsTable extends Migration
             $table->boolean('agree')->default(false);
             $table->text('db')->nullable();
             $table->text('mail')->nullable();
+            $table->text('file')->nullable();
             $table->text('mods')->nullable();
             $table->timestamps();
         });

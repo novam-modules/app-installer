@@ -36,8 +36,8 @@
     </div>
 </form>
 @isset($Accounts)
-@foreach($Accounts as $account)
 <div class="accordion card-column" id="accounts-wrapper">
+@foreach($Accounts as $account)
   <div class="card">
     <div class="card-header" id="heading{{ $account->id }}">
       <h5 class="mb-0">
@@ -52,8 +52,8 @@
       </div>
     </div>
   </div>
-</div>
 @endforeach
+</div>
 
 @endisset
 @endsection

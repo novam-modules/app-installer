@@ -1,6 +1,6 @@
 <?php
 
-return [
+$DB = [
 
     /*
     |--------------------------------------------------------------------------
@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => $default = env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'connections' => [
+    'connections' => $connections = [
 
         'sqlite' => [
             'driver' => 'sqlite',
@@ -39,7 +39,9 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => [
+        'tenant' => $tenant = require storage_path('app/configs/hilkiah.makemo.php'),
+
+        'mysql' => $tenant + [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
@@ -65,7 +67,7 @@ return [
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'prefer',
-        ],
+        ] + $tenant,
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
@@ -76,7 +78,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
-        ],
+        ] + $tenant,
 
     ],
 
@@ -125,3 +127,7 @@ return [
     ],
 
 ];
+
+$DB['connections']['system'] = $connections[$default];
+
+return $DB;

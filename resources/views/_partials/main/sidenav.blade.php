@@ -149,7 +149,10 @@
         </a>
         <ul id="formsDropdown" class="collapse list-unstyled ">
             <li>
-                <a href="{{ route('documedia.index') }}"> Storage </a>
+                <a href="{{ route('documedia.index') }}"> Records </a>
+            </li>
+            <li>
+                <a href="{{ route('documedia.show', 'files') }}"> Storage </a>
             </li>
             <li>
                 <a href="{{ route('documedia.create') }}"> Upload </a>
@@ -196,16 +199,13 @@
             </a>
             <ul id="formsDropDown" class="collapse list-unstyled ">
                 <li>
-                    <a href="pages-contacts.html">Builder</a>
+                    <a href="">List All</a>
                 </li>
                 <li>
-                    <a href="login.html">Viewer</a>
+                    <a href="">Builder</a>
                 </li>
                 <li>
-                    <a href="pages-profile.html">Profile</a>
-                </li>
-                <li>
-                    <a href="pages-pricing.html">Pricing table</a>
+                    <a href="">Viewer</a>
                 </li>
             </ul>
         </li>
@@ -218,7 +218,7 @@
         @can('access-system')
         <li class="{{ request()->is('*account*')?'active': '' }}">
             <a href="{{ user_route('account') }}">
-                <i class="fa fa-lock fa-fw"></i> Account
+                <i class="fa fa-lock fa-fw"></i> Accounts
             </a>
         </li>
         @endcan

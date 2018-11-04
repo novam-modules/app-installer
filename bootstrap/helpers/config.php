@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use App\Models\Sys\Setting;
 use Illuminate\Support\Facades\Cache;
@@ -15,7 +15,6 @@ if(!function_exists('settings')){
                 return array_pluck(Setting::all()->toArray(), 'value', 'key');
             });
         }
-        if(!$settings) $settings = Config::all();
 
         if($key === null) return $settings;
 
@@ -26,20 +25,19 @@ if(!function_exists('settings')){
 
 if (!function_exists('setting')) {
 
-    function setting($key, $value = null)
+    function setting($key, $value)
     {
         $settings = settings();
-        
+
         if(!is_array($value)){
             $settings[$key] = $value;
-            Config::set($key, $value);
-            
+
         } else{
             foreach($value as $k => $val){
                 $settings[$key][$k] = $val;
             }
         }
-        return $settings;
+        return $settings[$key] ?? env($key);
     }
 
 }
