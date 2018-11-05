@@ -14,4 +14,11 @@ class Account extends Model
     protected $casts = [
         'db' => 'array', 'mail' => 'array', 'mods' => 'array', 'file' => 'array'
     ];
+
+    public function Users()
+    {
+        $users =  $this->hasMany(User::class);
+        // dump($users->toSql(), $users->getBindings());
+        return $users;
+    }
 }

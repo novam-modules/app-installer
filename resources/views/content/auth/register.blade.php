@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-<h3>{{ __('Registration') }}</h3>
+<h3>{{ __('Register Users') }}</h3>
 <hr />
 <form class="form-validate" action="{{ route('register') }}" method="POST">
     @csrf
