@@ -21,8 +21,8 @@
                     <div class="col-lg-6">
                         <div class="info d-flex align-items-center justify-content-center bg-primary">
                             <div class="content">
-                                <div class="logo">
-                                    <img src="{{ env('APP_LOGO') }}" class="img-fluid" alt="">
+                                <div class="logo user-logo">
+                                    <img src="{{ config('app.logo') }}" class="img-fluid" alt="">
                                 </div>
                                 <p></p>
                             </div>
