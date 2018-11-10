@@ -39,7 +39,7 @@ $DB = [
             'prefix' => '',
         ],
 
-        'tenant' => $tenant = require storage_path('app/configs/hilkiah.makemo.php'),
+        'tenant' => $tenant = require 'tenant.php',
 
         'mysql' => $tenant + [
             'driver' => 'mysql',

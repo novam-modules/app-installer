@@ -39,5 +39,6 @@ class Install extends Command
     public function handle()
     {
         //
+        exec("composer install");
     }
 }
